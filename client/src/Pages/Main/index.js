@@ -2,6 +2,7 @@ import { Carousel } from '@mantine/carousel';
 import { BackgroundImage, Box, Burger, Button, Container, Flex, Image, Text } from '@mantine/core';
 
 import React from 'react';
+import Footer from '../../components/Footer';
 import { useStyles } from './styles';
 
 export default function Main() {
@@ -13,6 +14,8 @@ export default function Main() {
       style={{
         overflow: 'hidden',
         padding: 0,
+        maxWidth: 1440,
+        border: '1px solid red',
       }}
     >
       <BackgroundImage
@@ -66,8 +69,8 @@ export default function Main() {
       </BackgroundImage>
       <Flex
         bg="#084453"
-        p="135px 161px"
-        gap={112}
+        p="135px 118px"
+        justify="space-between"
       >
         <Flex
           direction="column"
@@ -82,9 +85,9 @@ export default function Main() {
           />
 
           <Text color="white">
-            Ne morate ponijeti ništa. Ni slikarsko <br /> iskustvo nije potrebno.Samo se pokažite spremni za zabavu, a
-            mi ćemo pokriti ostalo. Uz čašu vina, sve je lakše pa tako i potezi kistom. Opusti se uz izbor vina
-            odabranih slavonskih vinarija.
+            Kist u jednoj ruci, čaša u drugoj... <br /> Dopustite da vas ponese zabavna i <br />
+            kreativna atmosfera za stvaranje <br />
+            slike.
           </Text>
         </Flex>
         <Flex
@@ -100,9 +103,12 @@ export default function Main() {
           />
 
           <Text color="white">
-            Ne morate ponijeti ništa. Ni slikarsko iskustvo nije potrebno.Samo se pokažite spremni za zabavu, a mi ćemo
-            pokriti ostalo. Uz čašu vina, sve je lakše pa tako i potezi kistom. Opusti se uz izbor vina odabranih
-            slavonskih vinarija.
+            Znate samo obojiti svoje zidove, pa
+            <br />
+            čak i tada… Bez panike! Umjetnik će
+            <br /> vas voditi korak po korak kako biste
+            <br />
+            probudili svoju kreativnost
           </Text>
         </Flex>
         <Flex
@@ -118,14 +124,13 @@ export default function Main() {
           />
 
           <Text color="white">
-            Ne morate ponijeti ništa. Ni slikarsko iskustvo nije potrebno.Samo se pokažite spremni za zabavu, a mi ćemo
-            pokriti ostalo. Uz čašu vina, sve je lakše pa tako i potezi kistom. Opusti se uz izbor vina odabranih
-            slavonskih vinarija.
+            Podijelite nezaboravno iskustvo s <br /> prijateljima, upoznajte nove ljude i <br />
+            otiđite s vlastitom slikom!
           </Text>
         </Flex>
       </Flex>
 
-      <Flex p="61px 75px">
+      <Flex p="61px 40px">
         <Box position="relative">
           <Image
             pos="absolute"
@@ -146,7 +151,7 @@ export default function Main() {
             pos="relative"
             zIndex={1}
             p="0 80px"
-            gap={90}
+            gap={86}
           >
             <Flex
               direction="column"
@@ -199,13 +204,14 @@ export default function Main() {
         </Box>
       </Flex>
       <Flex
-        pl={150}
+        pl={40}
         pr={75}
         direction="column"
       >
         <Text
           size={70}
           fw={600}
+          pl={80}
           color="rgba(56, 59, 105, 1)"
         >
           Kalendar
@@ -423,6 +429,7 @@ export default function Main() {
           />
         </Flex>
       </Box>
+      <Footer />
     </Container>
   );
 }
