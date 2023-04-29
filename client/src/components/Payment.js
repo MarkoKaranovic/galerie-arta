@@ -8,8 +8,7 @@ export default function Payment() {
   const [clientSecret, setClientSecret] = useState('');
 
   React.useEffect(() => {
-    fetch('/config').then(async (r) => {
-      console.log(r);
+    fetch('/test').then(async (r) => {
       const { publishableKey } = await r.json();
       setStripePromise(loadStripe(publishableKey));
       console.log(publishableKey);
