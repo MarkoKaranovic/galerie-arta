@@ -1,5 +1,4 @@
-import { Carousel } from '@mantine/carousel';
-import { BackgroundImage, Box, Container, Flex, Image, Text } from '@mantine/core';
+import { BackgroundImage, Container, Flex, Image, Text } from '@mantine/core';
 
 import React from 'react';
 import { useStyles } from './styles';
