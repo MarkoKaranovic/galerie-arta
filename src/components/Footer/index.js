@@ -28,7 +28,13 @@ export default function Footer() {
           gap={15}
           direction="column"
         >
-          <Text color="white">RADNO VRIJEME</Text>
+          <Text
+            color="white"
+            size={18}
+            fw={600}
+          >
+            RADNO VRIJEME:
+          </Text>
           <Text color="white">UTO - SRI: 13:00 - 21:00</Text>
           <Text color="white">UTO - SRI: 13:00 - 21:00</Text>
           <Text color="white">UTO - SRI: 13:00 - 21:00</Text>
@@ -38,7 +44,13 @@ export default function Footer() {
           gap={15}
           direction="column"
         >
-          <Text color="white">INFORMACIJE</Text>
+          <Text
+            color="white"
+            size={18}
+            fw={600}
+          >
+            INFORMACIJE:
+          </Text>
           <Text color="white">
             Gundulićeva 32, <br />
             31000, Osijek <br />
@@ -51,11 +63,38 @@ export default function Footer() {
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11173.759677117765!2d18.661928648430465!3d45.56159133126761!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475ce7af30e889cf%3A0x4dbc181b18c449f0!2sOsijek!5e0!3m2!1sen!2shr!4v1683062316283!5m2!1sen!2shr"
           allowfullscreen=""
           loading="lazy"
+          style={{ border: 'none' }}
           referrerpolicy="no-referrer-when-downgrade"
         ></iframe>
       </Flex>
 
-      <Flex></Flex>
+      <Flex
+        justify="flex-start"
+        gap={50}
+        pt={50}
+      >
+        <Text
+          color="white"
+          size={18}
+          fw={600}
+        >
+          © 2023 GALERIA.ARTA
+        </Text>
+        <Text
+          color="white"
+          size={18}
+          fw={600}
+        >
+          OPĆI UVJETI
+        </Text>
+        <Text
+          color="white"
+          size={18}
+          fw={600}
+        >
+          PRAVILA PRIVATNOSTI OSOBNIH PODATAKA
+        </Text>
+      </Flex>
     </Box>
   );
 }

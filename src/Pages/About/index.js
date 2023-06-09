@@ -1,5 +1,4 @@
-import { Carousel } from '@mantine/carousel';
-import { BackgroundImage, Box, Container, Flex, Image, Text } from '@mantine/core';
+import { BackgroundImage, Container, Flex, Image, Text } from '@mantine/core';
 
 import React from 'react';
 import { useStyles } from './styles';
@@ -39,18 +38,16 @@ export default function About() {
         pr={155}
         pb={170}
         gap={20}
+        align="center"
       >
         <Text
           size={24}
           fw={400}
-          color="#084453"
+          color="primary.0"
         >
-          Osnovana 2023., Galeria Arta predstavlja malu <br /> oazu umjetničkog stvaralaštva. Presvećena <br />
-          stvaranju opuštenog i intimnog iskustva, Galeria <br /> Arta svojim polaznicima otvara vrata u svijet <br />
-          umjetnosti. Uz vodstvo stručnih voditelja, polaznici <br /> imaju priliku iskušati vlastite kreativne vještine
-          kroz <br /> zabavne radionice, dok oni više naklonjeni <br /> umjetnosti imaju mogućnost stjecanja znanja i
-          <br />
-          unaprjeđenja vlastitih kreativnih dometa kroz <br /> ponudu individualnih tečajeva i škole slikanja.
+          Dajemo vam uvid u djelić atmosfere našeg <br /> kreativnog studija. Prepustite se vodstvu naših kreativnih
+          instruktora i ne brinite ako vam umjetnost <br /> nije jača strana. Stvorit ćete pravo malo remek djelo na
+          koje ćete biti ponosni. Neka zabava počne!
         </Text>
         <Image
           src="/assets/glass-wine.png"
@@ -72,7 +69,7 @@ export default function About() {
         <Text
           size={70}
           fw={800}
-          color="#084453"
+          color="primary.0"
         >
           UPOZNAJTE NAS
         </Text>
@@ -86,7 +83,7 @@ export default function About() {
           <Text
             size={24}
             fw={400}
-            color="#084453"
+            color="primary.0"
           >
             Upoznajte Kristinu Janković, mag.educ.art. <br /> <br /> Bogato likovno znanje stekla je pohađajući Školu
             primijenjene <br /> umjetnosti i dizajna Osijek, a 2014. upisala je Akademiju za

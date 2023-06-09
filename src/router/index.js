@@ -13,7 +13,39 @@ export const router = createBrowserRouter([
   {
     path: '/',
     element: (
-      <MantineProvider>
+      <MantineProvider
+        theme={{
+          fontFamily: 'Teko',
+          headings: {
+            fontFamily: 'Teko',
+          },
+          colors: {
+            primary: ['#084453', '#383B69', '383B69'],
+            secondary: ['#FFFBF5', '#EFEFEF'],
+            warning: ['#D12E2E'],
+          },
+          breakpoints: {
+            xs: '30em',
+            sm: '48em',
+            md: '64em',
+            lg: '74em',
+            xl: '90em',
+          },
+          components: {
+            Container: {
+              defaultProps: {
+                sizes: {
+                  xs: 540,
+                  sm: 768,
+                  md: 960,
+                  lg: 1420,
+                  xl: 1920,
+                },
+              },
+            },
+          },
+        }}
+      >
         <Layout />
       </MantineProvider>
     ),

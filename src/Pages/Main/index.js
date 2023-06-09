@@ -25,15 +25,21 @@ export default function Main() {
         >
           <Text
             color="white"
-            size="120px"
+            // size="120px"
             fw={700}
+            sx={() => ({
+              fontSize: '10vw',
+              // '@media (max-width: 1245px)': {
+              //   fontSize: '104px',
+              // },
+            })}
           >
             ISKUSI ZABAVU, <br /> OKUSI UŽITAK
           </Text>
         </Flex>
       </BackgroundImage>
       <Flex
-        bg="#084453"
+        bg="primary.0"
         p="135px 118px"
         justify="space-between"
       >
@@ -49,7 +55,7 @@ export default function Main() {
             h={120}
           />
           <Text
-            size={30}
+            size={24}
             color="white"
             ff="Teko"
             fw={600}
@@ -68,7 +74,7 @@ export default function Main() {
         </Flex>
         <Flex
           direction="column"
-          gap={120}
+          gap={50}
           justify="center"
           align="center"
         >
@@ -77,19 +83,27 @@ export default function Main() {
             maw={137}
             h={120}
           />
+          <Text
+            size={24}
+            color="white"
+            ff="Teko"
+            fw={600}
+          >
+            KREATIVNI I VESELI SATI
+          </Text>
 
-          <Text color="white">
-            Znate samo obojiti svoje zidove, pa
-            <br />
-            čak i tada… Bez panike! Umjetnik će
-            <br /> vas voditi korak po korak kako biste
-            <br />
-            probudili svoju kreativnost
+          <Text
+            size={18}
+            color="white"
+          >
+            Kist u jednoj ruci, čaša u drugoj... <br /> Dopustite da vas ponese zabavna i <br />
+            kreativna atmosfera za stvaranje <br />
+            slike.
           </Text>
         </Flex>
         <Flex
           direction="column"
-          gap={120}
+          gap={50}
           justify="center"
           align="center"
         >
@@ -98,91 +112,99 @@ export default function Main() {
             maw={137}
             h={120}
           />
+          <Text
+            size={24}
+            color="white"
+            ff="Teko"
+            fw={600}
+          >
+            KREATIVNI I VESELI SATI
+          </Text>
 
-          <Text color="white">
-            Podijelite nezaboravno iskustvo s <br /> prijateljima, upoznajte nove ljude i <br />
-            otiđite s vlastitom slikom!
+          <Text
+            size={18}
+            color="white"
+          >
+            Kist u jednoj ruci, čaša u drugoj... <br /> Dopustite da vas ponese zabavna i <br />
+            kreativna atmosfera za stvaranje <br />
+            slike.
           </Text>
         </Flex>
       </Flex>
 
-      <Flex p="61px 40px">
-        <Box position="relative">
-          <Image
-            pos="absolute"
-            maw={287}
-            src="/assets/brushMarker.svg"
-            zIndex={-1}
-          />
-          <Image
-            pos="absolute"
-            src="/assets/brownMark.png"
-            maw={200}
-            mah={303}
-            zIndex={-1}
-            right={0}
-            mb={101}
-          />
+      <Box
+        p="61px 40px"
+        bg="#FFFBF5"
+        position="relative"
+      >
+        <Image
+          pos="absolute"
+          maw={287}
+          src="/assets/brushMarker.svg"
+          zIndex={-1}
+        />
+        <Flex
+          pos="relative"
+          zIndex={1}
+          p="0 80px"
+          gap={86}
+          justify="space-between"
+        >
           <Flex
-            pos="relative"
-            zIndex={1}
-            p="0 80px"
-            gap={86}
+            direction="column"
+            gap={55}
           >
+            <Text
+              size={70}
+              color="rgba(56, 59, 105, 1)"
+              fw={600}
+            >
+              POVEDI SVOG <br /> PRIJATELJA, PARTNERA <br /> ILI CIJELU EKIPU
+            </Text>
+            <Image src="/assets/BiggeSmalls.png" />
+          </Flex>
+          <Flex
+            direction="column"
+            gap={100}
+            pt={90}
+          >
+            <Text
+              size={24}
+              color="rgba(56, 59, 105, 1)"
+              fw={400}
+            >
+              Podigli smo ljestvicu iskustva Galeria <br /> Arta i pozivamo Vas da se pridružite <br /> zabavi. Vino se
+              hladi, platno zove, a vibra <br /> je sve samo ne dosadna.
+            </Text>
             <Flex
               direction="column"
-              gap={55}
+              gap={50}
             >
+              <Image src="/assets/Eye.png" />
               <Text
-                size={70}
+                size={43}
                 color="rgba(56, 59, 105, 1)"
-                fw={600}
+                fw={500}
               >
-                POVEDI SVOG <br /> PRIJATELJA, PARTNERA <br /> ILI CIJELU EKIPU
+                DRUŽIMO SE U ...
               </Text>
-              <Image src="/assets/BiggeSmalls.png" />
-            </Flex>
-            <Flex
-              direction="column"
-              gap={100}
-            >
               <Text
-                size={24}
+                size={30}
                 color="rgba(56, 59, 105, 1)"
-                fw={400}
+                fw={500}
+                underline
               >
-                Podigli smo ljestvicu iskustva Galeria <br /> Arta i pozivamo Vas da se pridružite <br /> zabavi. Vino
-                se hladi, platno zove, a vibra <br /> je sve samo ne dosadna.
+                Osijeku
               </Text>
-              <Flex
-                direction="column"
-                gap={50}
-              >
-                <Image src="/assets/Eye.png" />
-                <Text
-                  size={63}
-                  color="rgba(56, 59, 105, 1)"
-                  fw={500}
-                >
-                  DRUŽIMO SE U ...
-                </Text>
-                <Text
-                  size={30}
-                  color="rgba(56, 59, 105, 1)"
-                  fw={500}
-                  underline
-                >
-                  Osijeku
-                </Text>
-              </Flex>
             </Flex>
           </Flex>
-        </Box>
-      </Flex>
+        </Flex>
+      </Box>
       <Flex
         pl={40}
         pr={75}
         direction="column"
+        bg="#FFFBF5"
       >
         <Text
           size={70}
@@ -261,8 +283,12 @@ export default function Main() {
       <Box
         pl={155}
         pr={155}
+        bg="#FFFBF5"
       >
-        <Flex gap={20}>
+        <Flex
+          gap={20}
+          justify="space-between"
+        >
           <Image
             src="/assets/Painting.svg"
             maw={555}
@@ -296,6 +322,7 @@ export default function Main() {
         <Flex
           gap={20}
           pt={150}
+          justify="space-between"
         >
           <Flex
             direction="column"
@@ -347,6 +374,7 @@ export default function Main() {
         <Flex
           pt={200}
           gap={20}
+          justify="space-between"
         >
           <Image
             src="/assets/paintWomen.svg"
@@ -376,7 +404,11 @@ export default function Main() {
             </Text>
           </Flex>
         </Flex>
-        <Flex pt={200}>
+        <Flex
+          pt={200}
+          gap={20}
+          justify="space-between"
+        >
           <Flex
             gap={20}
             direction="column"

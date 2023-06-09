@@ -8,7 +8,8 @@ export default function Layout() {
   return (
     <Container
       // style={{ border: '1px solid red' }}
-      maw={1440}
+      // maw={1440}
+      maw="none"
       p={0}
     >
       <Navigation />
