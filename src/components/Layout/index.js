@@ -1,6 +1,7 @@
 import { Box, Container } from '@mantine/core';
 import React from 'react';
 import { Outlet } from 'react-router-dom';
+
 import Footer from '../Footer';
 import Navigation from '../Navigation';
 
@@ -10,6 +11,7 @@ export default function Layout() {
       // style={{ border: '1px solid red' }}
       // maw={1440}
       maw="none"
+      style={{ border: '1px solid red', overflow: 'hidden' }}
       p={0}
     >
       <Navigation />
