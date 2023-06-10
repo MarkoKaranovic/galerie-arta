@@ -25,13 +25,12 @@ export default function Main() {
         >
           <Text
             color="white"
-            // size="120px"
+            size="120px"
             fw={700}
             sx={() => ({
-              fontSize: '10vw',
-              // '@media (max-width: 1245px)': {
-              //   fontSize: '104px',
-              // },
+              '@media (max-width: 400px)': {
+                fontSize: '18px',
+              },
             })}
           >
             ISKUSI ZABAVU, <br /> OKUSI UŽITAK
@@ -42,6 +41,13 @@ export default function Main() {
         bg="primary.0"
         p="135px 118px"
         justify="space-between"
+        sx={() => ({
+          '@media (max-width: 400px)': {
+            display: 'block',
+            padding: '20px 30px',
+          },
+        })}
+        direction="row"
       >
         <Flex
           direction="column"
@@ -59,6 +65,11 @@ export default function Main() {
             color="white"
             ff="Teko"
             fw={600}
+            sx={() => ({
+              '@media (max-width: 400px)': {
+                fontSize: '14px',
+              },
+            })}
           >
             KREATIVNI I VESELI SATI
           </Text>
@@ -66,6 +77,11 @@ export default function Main() {
           <Text
             size={18}
             color="white"
+            sx={() => ({
+              '@media (max-width: 400px)': {
+                fontSize: '12px',
+              },
+            })}
           >
             Kist u jednoj ruci, čaša u drugoj... <br /> Dopustite da vas ponese zabavna i <br />
             kreativna atmosfera za stvaranje <br />
@@ -88,6 +104,11 @@ export default function Main() {
             color="white"
             ff="Teko"
             fw={600}
+            sx={() => ({
+              '@media (max-width: 400px)': {
+                fontSize: '14px',
+              },
+            })}
           >
             KREATIVNI I VESELI SATI
           </Text>
@@ -95,6 +116,11 @@ export default function Main() {
           <Text
             size={18}
             color="white"
+            sx={() => ({
+              '@media (max-width: 400px)': {
+                fontSize: '12px',
+              },
+            })}
           >
             Kist u jednoj ruci, čaša u drugoj... <br /> Dopustite da vas ponese zabavna i <br />
             kreativna atmosfera za stvaranje <br />
@@ -117,6 +143,11 @@ export default function Main() {
             color="white"
             ff="Teko"
             fw={600}
+            sx={() => ({
+              '@media (max-width: 400px)': {
+                fontSize: '14px',
+              },
+            })}
           >
             KREATIVNI I VESELI SATI
           </Text>
@@ -124,6 +155,11 @@ export default function Main() {
           <Text
             size={18}
             color="white"
+            sx={() => ({
+              '@media (max-width: 400px)': {
+                fontSize: '12px',
+              },
+            })}
           >
             Kist u jednoj ruci, čaša u drugoj... <br /> Dopustite da vas ponese zabavna i <br />
             kreativna atmosfera za stvaranje <br />
@@ -136,6 +172,11 @@ export default function Main() {
         p="61px 40px"
         bg="#FFFBF5"
         position="relative"
+        sx={() => ({
+          '@media (max-width: 400px)': {
+            padding: '20px 10px',
+          },
+        })}
       >
         <Image
           pos="absolute"
@@ -149,6 +190,12 @@ export default function Main() {
           p="0 80px"
           gap={86}
           justify="space-between"
+          sx={() => ({
+            '@media (max-width: 400px)': {
+              display: 'block',
+              padding: '0 40px',
+            },
+          })}
         >
           <Flex
             direction="column"
@@ -158,6 +205,11 @@ export default function Main() {
               size={70}
               color="rgba(56, 59, 105, 1)"
               fw={600}
+              sx={() => ({
+                '@media (max-width: 400px)': {
+                  fontSize: '30px',
+                },
+              })}
             >
               POVEDI SVOG <br /> PRIJATELJA, PARTNERA <br /> ILI CIJELU EKIPU
             </Text>
@@ -167,11 +219,21 @@ export default function Main() {
             direction="column"
             gap={100}
             pt={90}
+            sx={() => ({
+              '@media (max-width: 400px)': {
+                paddingTop: '30px',
+              },
+            })}
           >
             <Text
               size={24}
               color="rgba(56, 59, 105, 1)"
               fw={400}
+              sx={() => ({
+                '@media (max-width: 400px)': {
+                  fontSize: '14px',
+                },
+              })}
             >
               Podigli smo ljestvicu iskustva Galeria <br /> Arta i pozivamo Vas da se pridružite <br /> zabavi. Vino se
               hladi, platno zove, a vibra <br /> je sve samo ne dosadna.
@@ -179,12 +241,22 @@ export default function Main() {
             <Flex
               direction="column"
               gap={50}
+              sx={() => ({
+                '@media (max-width: 400px)': {
+                  gap: '20px',
+                },
+              })}
             >
               <Image src="/assets/Eye.png" />
               <Text
                 size={43}
                 color="rgba(56, 59, 105, 1)"
                 fw={500}
+                sx={() => ({
+                  '@media (max-width: 400px)': {
+                    fontSize: '18px',
+                  },
+                })}
               >
                 DRUŽIMO SE U ...
               </Text>
@@ -193,6 +265,11 @@ export default function Main() {
                 color="rgba(56, 59, 105, 1)"
                 fw={500}
                 underline
+                sx={() => ({
+                  '@media (max-width: 400px)': {
+                    fontSize: '18px',
+                  },
+                })}
               >
                 Osijeku
               </Text>
@@ -205,12 +282,22 @@ export default function Main() {
         pr={75}
         direction="column"
         bg="#FFFBF5"
+        sx={() => ({
+          '@media (max-width: 400px)': {
+            display: 'block',
+          },
+        })}
       >
         <Text
           size={70}
           fw={600}
           pl={80}
           color="rgba(56, 59, 105, 1)"
+          sx={() => ({
+            '@media (max-width: 400px)': {
+              fontSize: '28px',
+            },
+          })}
         >
           Kalendar
         </Text>
@@ -218,10 +305,15 @@ export default function Main() {
           justify="center"
           pt={33}
           pb={200}
+          sx={() => ({
+            '@media (max-width: 400px)': {
+              paddingBottom: '70px',
+            },
+          })}
         >
           <Carousel
             slideGap="xl"
-            controlSize={50}
+            controlSize={20}
             draggable
             loop
             align="center"
@@ -284,6 +376,11 @@ export default function Main() {
         pl={155}
         pr={155}
         bg="#FFFBF5"
+        sx={() => ({
+          '@media (max-width: 400px)': {
+            padding: '70px 60px',
+          },
+        })}
       >
         <Flex
           gap={20}
@@ -298,12 +395,22 @@ export default function Main() {
             direction="column"
             gap={20}
             pt={100}
+            sx={() => ({
+              '@media (max-width: 400px)': {
+                paddingTop: '10px',
+              },
+            })}
           >
             <Text
               size={50}
               fw={700}
               ff="Teko"
               color="rgba(56, 59, 105, 1)"
+              sx={() => ({
+                '@media (max-width: 400px)': {
+                  fontSize: '10px',
+                },
+              })}
             >
               NEŠTO POSEBNO I ZA <br /> MALENE
             </Text>
@@ -312,6 +419,11 @@ export default function Main() {
               fw={400}
               ff="Roboto"
               color="rgba(56, 59, 105, 1)"
+              sx={() => ({
+                '@media (max-width: 400px)': {
+                  fontSize: '6px',
+                },
+              })}
             >
               Naše likovne radionice su puno više od ubičnih umjetničkih lekcija - <br /> ovdje se vaša djeca mogu
               izraziti, istražiti svoju kreativnost i pronaći <br /> nove prijatelje. Naši iskusni instruktori vodit će
@@ -323,6 +435,11 @@ export default function Main() {
           gap={20}
           pt={150}
           justify="space-between"
+          sx={() => ({
+            '@media (max-width: 400px)': {
+              paddingTop: '50px',
+            },
+          })}
         >
           <Flex
             direction="column"
@@ -333,6 +450,11 @@ export default function Main() {
               color="rgba(8, 68, 83, 1) "
               size={24}
               fw={700}
+              sx={() => ({
+                '@media (max-width: 400px)': {
+                  fontSize: '10px',
+                },
+              })}
             >
               #PARTYGOALS
             </Text>
@@ -340,6 +462,11 @@ export default function Main() {
               size={60}
               fw={700}
               color="rgba(56, 59, 105, 1)"
+              sx={() => ({
+                '@media (max-width: 400px)': {
+                  fontSize: '10px',
+                },
+              })}
             >
               NEKA BUDE SAMO <br /> NA POZIVNICU
             </Text>
@@ -348,6 +475,11 @@ export default function Main() {
                 size={18}
                 fw={400}
                 color="rgba(56, 59, 105, 1)"
+                sx={() => ({
+                  '@media (max-width: 400px)': {
+                    fontSize: '6px',
+                  },
+                })}
               >
                 Znamo kako organizirati zabavu, pa zašto nam ne biste dopustili da <br /> organiziramo vašu? Zauzmite
                 cijeli atelje, odaberite tematsku sliku <br />
@@ -360,6 +492,11 @@ export default function Main() {
                 size={20}
                 fw={500}
                 color="rgba(56, 59, 105, 1)"
+                sx={() => ({
+                  '@media (max-width: 400px)': {
+                    fontSize: '10px',
+                  },
+                })}
               >
                 Planirajte zabavu
               </Text>
@@ -375,6 +512,11 @@ export default function Main() {
           pt={200}
           gap={20}
           justify="space-between"
+          sx={() => ({
+            '@media (max-width: 400px)': {
+              paddingTop: '50px',
+            },
+          })}
         >
           <Image
             src="/assets/paintWomen.svg"
@@ -384,11 +526,21 @@ export default function Main() {
           <Flex
             direction="column"
             pt={100}
+            sx={() => ({
+              '@media (max-width: 400px)': {
+                paddingTop: '40px',
+              },
+            })}
           >
             <Text
               color="rgba(56, 59, 105, 1)"
               size={70}
               fw={700}
+              sx={() => ({
+                '@media (max-width: 400px)': {
+                  fontSize: '10px',
+                },
+              })}
             >
               A KERAMIKA?
             </Text>
@@ -396,6 +548,11 @@ export default function Main() {
               color="rgba(56, 59, 105, 1)"
               size={18}
               fw={400}
+              sx={() => ({
+                '@media (max-width: 400px)': {
+                  fontSize: '6px',
+                },
+              })}
             >
               Na našim keramičkim radionicama ćete pronaći sve što vam treba <br /> za stvaranje unikatnih umjetničkih
               djela od gline. Uz mnošto <br /> zabavnih aktivnosti, tehnika i tečajeva, naša keramička radionica <br />{' '}
@@ -408,16 +565,31 @@ export default function Main() {
           pt={200}
           gap={20}
           justify="space-between"
+          sx={() => ({
+            '@media (max-width: 400px)': {
+              paddingTop: '50px',
+            },
+          })}
         >
           <Flex
             gap={20}
             direction="column"
             pt={100}
+            sx={() => ({
+              '@media (max-width: 400px)': {
+                paddingTop: '40px',
+              },
+            })}
           >
             <Text
               color="rgba(56, 59, 105, 1)"
               size={70}
               fw={700}
+              sx={() => ({
+                '@media (max-width: 400px)': {
+                  fontSize: '10px',
+                },
+              })}
             >
               POKOLN BON
             </Text>
@@ -425,6 +597,11 @@ export default function Main() {
               color="rgba(56, 59, 105, 1)"
               size={18}
               fw={400}
+              sx={() => ({
+                '@media (max-width: 400px)': {
+                  fontSize: '6px',
+                },
+              })}
             >
               Iznenadite svoje najmilije posebnim poklonom, <br /> odaberite neku od naših usluga i razveselite <br />{' '}
               dragu osobu.
