@@ -1,6 +1,6 @@
 import { MantineProvider } from '@mantine/core';
-import React from 'react';
 import { createBrowserRouter } from 'react-router-dom';
+import Layout from '../Layout';
 import About from '../Pages/About';
 import Contact from '../Pages/Contact';
 import Gallery from '../Pages/Gallery';
@@ -8,7 +8,6 @@ import Gift from '../Pages/Gift';
 import Main from '../Pages/Main';
 import Reservation from '../Pages/Reservation';
 import Service from '../Pages/Service';
-import Layout from '../components/Layout';
 
 export const router = createBrowserRouter([
   {

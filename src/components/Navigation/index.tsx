@@ -24,6 +24,7 @@ export default function Navigation() {
           bg="#084453"
           className={classes.burger}
           onClick={open}
+          opened={opened}
         />
         {/* <Button
           radius={25}
@@ -86,7 +87,7 @@ export default function Navigation() {
         <Menu
           opened={opened}
           close={close}
-          toggle={toggle}
+          // toggle={toggle}
         />
       </Flex>
     </>

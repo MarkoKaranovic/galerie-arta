@@ -19,14 +19,14 @@ export default function Menu({ opened, close }) {
       fullScreen
       styles={{
         inner: {
-          width: '50% !important',
+          width: '100% !important',
         },
       }}
     >
       <Modal.Overlay />
       <Modal.Content
         bg="#084453"
-        h="50%"
+        h="100%"
       >
         <Modal.Header bg="#084453">
           <Image
@@ -36,17 +36,17 @@ export default function Menu({ opened, close }) {
             mah={25}
             pt={46}
             pl={46}
-            pb={111}
+            pb={50}
           />
         </Modal.Header>
-        <Modal.Body p={140}>
+        <Modal.Body p={50}>
           <Flex
             direction="column"
             gap={20}
           >
             <Text
               color="white"
-              size={50}
+              size="s"
               fw={700}
             >
               LINKOVI
