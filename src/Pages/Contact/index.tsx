@@ -1,5 +1,4 @@
 import { Box, Button, Divider, Flex, Text, TextInput, Textarea } from '@mantine/core';
-import React from 'react';
 
 export default function Contact() {
   return (
@@ -128,7 +127,6 @@ export default function Contact() {
             title="location"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11173.759677117765!2d18.661928648430465!3d45.56159133126761!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475ce7af30e889cf%3A0x4dbc181b18c449f0!2sOsijek!5e0!3m2!1sen!2shr!4v1683062316283!5m2!1sen!2shr"
             loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
             style={{ border: 'none' }}
           ></iframe>
         </Box>

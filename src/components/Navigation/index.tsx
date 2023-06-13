@@ -1,7 +1,6 @@
 import { Burger, Flex } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 
-import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Menu from '../Menu';
 import { useStyles } from './styles';
@@ -14,7 +13,6 @@ export default function Navigation() {
       <Flex
         bg="#FFFBF5"
         justify="space-between"
-        width="100%"
         p="30px 40px"
         // pl="298px"
       >

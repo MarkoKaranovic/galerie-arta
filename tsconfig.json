@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "esModuleInterop": true,
+    "target": "es6",
+    "module": "esnext",
+    "outDir": "./dist",
+    "moduleResolution": "Node",
+    "paths": {
+      "@galeria-arta/*": ["./src/*"]
+    }
+  },
+  "include": ["src", "test", "typings/**/*.d.ts"]
+}

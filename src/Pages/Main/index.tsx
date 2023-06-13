@@ -1,6 +1,5 @@
 import { BackgroundImage, Box, Container, Flex, Image, Text } from '@mantine/core';
 
-import React from 'react';
 import TestimonialSlider from '../../components/Slider';
 import { useStyles } from './styles';
 
@@ -171,7 +170,6 @@ export default function Main() {
       <Box
         p="61px 40px"
         bg="#FFFBF5"
-        position="relative"
         sx={(theme) => ({
           [`@media (max-width: ${theme.breakpoints.mobile})`]: {
             padding: '20px 10px',
@@ -182,11 +180,11 @@ export default function Main() {
           pos="absolute"
           maw={287}
           src="/assets/brushMarker.svg"
-          zIndex={-1}
+          // zIndex={-1}
         />
         <Flex
           pos="relative"
-          zIndex={1}
+          // zIndex={1}
           p="0 80px"
           gap={86}
           justify="space-between"

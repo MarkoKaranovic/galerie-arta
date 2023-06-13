@@ -14,7 +14,6 @@ export default function EventCard() {
         ml={0}
         mt={0}
         maw={285}
-        da
       >
         <Image
           src="/assets/event-card.png"
