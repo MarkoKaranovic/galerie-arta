@@ -1,6 +1,5 @@
 import { Button, Flex } from '@mantine/core';
 
-import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 export default function Navigation() {
@@ -11,7 +10,6 @@ export default function Navigation() {
       <Flex
         bg="#FFFBF5"
         justify="space-between"
-        width="100%"
         p="30px 40px"
         pl="298px"
       >

@@ -1,4 +1,5 @@
 import { MantineProvider } from '@mantine/core';
+import React from 'react';
 import { createBrowserRouter } from 'react-router-dom';
 import About from '../Pages/About';
 import Contact from '../Pages/Contact';
