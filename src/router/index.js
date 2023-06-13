@@ -19,6 +19,14 @@ export const router = createBrowserRouter([
           headings: {
             fontFamily: 'Teko',
           },
+          fontSizes: {
+            xl: '120px',
+            lg: '70px',
+            md: '63px',
+            sm: '30px',
+            s: '24px',
+            xs: '18px',
+          },
           colors: {
             primary: ['#084453', '#383B69', '383B69'],
             secondary: ['#FFFBF5', '#EFEFEF'],
@@ -27,9 +35,12 @@ export const router = createBrowserRouter([
           breakpoints: {
             xs: '30em',
             sm: '48em',
-            md: '64em',
-            lg: '74em',
-            xl: '90em',
+            md: '360px',
+            lg: '720px',
+            xl: '1440px',
+            mobile: '360px',
+            tablet: '720px',
+            desktop: '1440px',
           },
           components: {
             Container: {

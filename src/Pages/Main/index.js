@@ -1,7 +1,7 @@
-import { Carousel } from '@mantine/carousel';
 import { BackgroundImage, Box, Container, Flex, Image, Text } from '@mantine/core';
 
 import React from 'react';
+import TestimonialSlider from '../../components/Slider';
 import { useStyles } from './styles';
 
 export default function Main() {
@@ -25,11 +25,11 @@ export default function Main() {
         >
           <Text
             color="white"
-            size="120px"
+            size="xl"
             fw={700}
-            sx={() => ({
-              '@media (max-width: 400px)': {
-                fontSize: '18px',
+            sx={(theme) => ({
+              [`@media (max-width: ${theme.breakpoints.mobile})`]: {
+                fontSize: theme.fontSizes.xs,
               },
             })}
           >
@@ -41,8 +41,8 @@ export default function Main() {
         bg="primary.0"
         p="135px 118px"
         justify="space-between"
-        sx={() => ({
-          '@media (max-width: 400px)': {
+        sx={(theme) => ({
+          [`@media (max-width: ${theme.breakpoints.mobile})`]: {
             display: 'block',
             padding: '20px 30px',
           },
@@ -61,13 +61,13 @@ export default function Main() {
             h={120}
           />
           <Text
-            size={24}
+            size="s"
             color="white"
             ff="Teko"
             fw={600}
-            sx={() => ({
-              '@media (max-width: 400px)': {
-                fontSize: '14px',
+            sx={(theme) => ({
+              [`@media (max-width: ${theme.breakpoints.mobile})`]: {
+                fontSize: theme.fontSizes.xs,
               },
             })}
           >
@@ -77,9 +77,9 @@ export default function Main() {
           <Text
             size={18}
             color="white"
-            sx={() => ({
-              '@media (max-width: 400px)': {
-                fontSize: '12px',
+            sx={(theme) => ({
+              [`@media (max-width: ${theme.breakpoints.mobile})`]: {
+                fontSize: theme.fontSizes.xs,
               },
             })}
           >
@@ -100,13 +100,13 @@ export default function Main() {
             h={120}
           />
           <Text
-            size={24}
+            size="s"
             color="white"
             ff="Teko"
             fw={600}
-            sx={() => ({
-              '@media (max-width: 400px)': {
-                fontSize: '14px',
+            sx={(theme) => ({
+              [`@media (max-width: ${theme.breakpoints.mobile})`]: {
+                fontSize: theme.fontSizes.xs,
               },
             })}
           >
@@ -116,9 +116,9 @@ export default function Main() {
           <Text
             size={18}
             color="white"
-            sx={() => ({
-              '@media (max-width: 400px)': {
-                fontSize: '12px',
+            sx={(theme) => ({
+              [`@media (max-width: ${theme.breakpoints.mobile})`]: {
+                fontSize: theme.fontSizes.xs,
               },
             })}
           >
@@ -139,13 +139,13 @@ export default function Main() {
             h={120}
           />
           <Text
-            size={24}
+            size="s"
             color="white"
             ff="Teko"
             fw={600}
-            sx={() => ({
-              '@media (max-width: 400px)': {
-                fontSize: '14px',
+            sx={(theme) => ({
+              [`@media (max-width: ${theme.breakpoints.mobile})`]: {
+                fontSize: theme.fontSizes.xs,
               },
             })}
           >
@@ -155,9 +155,9 @@ export default function Main() {
           <Text
             size={18}
             color="white"
-            sx={() => ({
-              '@media (max-width: 400px)': {
-                fontSize: '12px',
+            sx={(theme) => ({
+              [`@media (max-width: ${theme.breakpoints.mobile})`]: {
+                fontSize: theme.fontSizes.xs,
               },
             })}
           >
@@ -172,8 +172,8 @@ export default function Main() {
         p="61px 40px"
         bg="#FFFBF5"
         position="relative"
-        sx={() => ({
-          '@media (max-width: 400px)': {
+        sx={(theme) => ({
+          [`@media (max-width: ${theme.breakpoints.mobile})`]: {
             padding: '20px 10px',
           },
         })}
@@ -190,8 +190,8 @@ export default function Main() {
           p="0 80px"
           gap={86}
           justify="space-between"
-          sx={() => ({
-            '@media (max-width: 400px)': {
+          sx={(theme) => ({
+            [`@media (max-width: ${theme.breakpoints.mobile})`]: {
               display: 'block',
               padding: '0 40px',
             },
@@ -205,8 +205,8 @@ export default function Main() {
               size={70}
               color="rgba(56, 59, 105, 1)"
               fw={600}
-              sx={() => ({
-                '@media (max-width: 400px)': {
+              sx={(theme) => ({
+                [`@media (max-width: ${theme.breakpoints.mobile})`]: {
                   fontSize: '30px',
                 },
               })}
@@ -219,19 +219,19 @@ export default function Main() {
             direction="column"
             gap={100}
             pt={90}
-            sx={() => ({
-              '@media (max-width: 400px)': {
+            sx={(theme) => ({
+              [`@media (max-width: ${theme.breakpoints.mobile})`]: {
                 paddingTop: '30px',
               },
             })}
           >
             <Text
-              size={24}
+              size="s"
               color="rgba(56, 59, 105, 1)"
               fw={400}
-              sx={() => ({
-                '@media (max-width: 400px)': {
-                  fontSize: '14px',
+              sx={(theme) => ({
+                [`@media (max-width: ${theme.breakpoints.mobile})`]: {
+                  fontSize: theme.fontSizes.xs,
                 },
               })}
             >
@@ -241,8 +241,8 @@ export default function Main() {
             <Flex
               direction="column"
               gap={50}
-              sx={() => ({
-                '@media (max-width: 400px)': {
+              sx={(theme) => ({
+                [`@media (max-width: ${theme.breakpoints.mobile})`]: {
                   gap: '20px',
                 },
               })}
@@ -252,8 +252,8 @@ export default function Main() {
                 size={43}
                 color="rgba(56, 59, 105, 1)"
                 fw={500}
-                sx={() => ({
-                  '@media (max-width: 400px)': {
+                sx={(theme) => ({
+                  [`@media (max-width: ${theme.breakpoints.mobile})`]: {
                     fontSize: '18px',
                   },
                 })}
@@ -265,8 +265,8 @@ export default function Main() {
                 color="rgba(56, 59, 105, 1)"
                 fw={500}
                 underline
-                sx={() => ({
-                  '@media (max-width: 400px)': {
+                sx={(theme) => ({
+                  [`@media (max-width: ${theme.breakpoints.mobile})`]: {
                     fontSize: '18px',
                   },
                 })}
@@ -282,8 +282,8 @@ export default function Main() {
         pr={75}
         direction="column"
         bg="#FFFBF5"
-        sx={() => ({
-          '@media (max-width: 400px)': {
+        sx={(theme) => ({
+          [`@media (max-width: ${theme.breakpoints.mobile})`]: {
             display: 'block',
           },
         })}
@@ -293,8 +293,8 @@ export default function Main() {
           fw={600}
           pl={80}
           color="rgba(56, 59, 105, 1)"
-          sx={() => ({
-            '@media (max-width: 400px)': {
+          sx={(theme) => ({
+            [`@media (max-width: ${theme.breakpoints.mobile})`]: {
               fontSize: '28px',
             },
           })}
@@ -305,13 +305,13 @@ export default function Main() {
           justify="center"
           pt={33}
           pb={200}
-          sx={() => ({
-            '@media (max-width: 400px)': {
+          sx={(theme) => ({
+            [`@media (max-width: ${theme.breakpoints.mobile})`]: {
               paddingBottom: '70px',
             },
           })}
         >
-          <Carousel
+          {/* <Carousel
             slideGap="xl"
             controlSize={20}
             draggable
@@ -369,15 +369,16 @@ export default function Main() {
                 />
               </Flex>
             </Carousel.Slide>
-          </Carousel>
+          </Carousel> */}
+          <TestimonialSlider />
         </Flex>
       </Flex>
       <Box
         pl={155}
         pr={155}
         bg="#FFFBF5"
-        sx={() => ({
-          '@media (max-width: 400px)': {
+        sx={(theme) => ({
+          [`@media (max-width: ${theme.breakpoints.mobile})`]: {
             padding: '70px 60px',
           },
         })}
@@ -395,8 +396,8 @@ export default function Main() {
             direction="column"
             gap={20}
             pt={100}
-            sx={() => ({
-              '@media (max-width: 400px)': {
+            sx={(theme) => ({
+              [`@media (max-width: ${theme.breakpoints.mobile})`]: {
                 paddingTop: '10px',
               },
             })}
@@ -406,8 +407,8 @@ export default function Main() {
               fw={700}
               ff="Teko"
               color="rgba(56, 59, 105, 1)"
-              sx={() => ({
-                '@media (max-width: 400px)': {
+              sx={(theme) => ({
+                [`@media (max-width: ${theme.breakpoints.mobile})`]: {
                   fontSize: '10px',
                 },
               })}
@@ -419,8 +420,8 @@ export default function Main() {
               fw={400}
               ff="Roboto"
               color="rgba(56, 59, 105, 1)"
-              sx={() => ({
-                '@media (max-width: 400px)': {
+              sx={(theme) => ({
+                [`@media (max-width: ${theme.breakpoints.mobile})`]: {
                   fontSize: '6px',
                 },
               })}
@@ -435,8 +436,8 @@ export default function Main() {
           gap={20}
           pt={150}
           justify="space-between"
-          sx={() => ({
-            '@media (max-width: 400px)': {
+          sx={(theme) => ({
+            [`@media (max-width: ${theme.breakpoints.mobile})`]: {
               paddingTop: '50px',
             },
           })}
@@ -448,10 +449,10 @@ export default function Main() {
           >
             <Text
               color="rgba(8, 68, 83, 1) "
-              size={24}
+              size="s"
               fw={700}
-              sx={() => ({
-                '@media (max-width: 400px)': {
+              sx={(theme) => ({
+                [`@media (max-width: ${theme.breakpoints.mobile})`]: {
                   fontSize: '10px',
                 },
               })}
@@ -462,8 +463,8 @@ export default function Main() {
               size={60}
               fw={700}
               color="rgba(56, 59, 105, 1)"
-              sx={() => ({
-                '@media (max-width: 400px)': {
+              sx={(theme) => ({
+                [`@media (max-width: ${theme.breakpoints.mobile})`]: {
                   fontSize: '10px',
                 },
               })}
@@ -475,8 +476,8 @@ export default function Main() {
                 size={18}
                 fw={400}
                 color="rgba(56, 59, 105, 1)"
-                sx={() => ({
-                  '@media (max-width: 400px)': {
+                sx={(theme) => ({
+                  [`@media (max-width: ${theme.breakpoints.mobile})`]: {
                     fontSize: '6px',
                   },
                 })}
@@ -492,8 +493,8 @@ export default function Main() {
                 size={20}
                 fw={500}
                 color="rgba(56, 59, 105, 1)"
-                sx={() => ({
-                  '@media (max-width: 400px)': {
+                sx={(theme) => ({
+                  [`@media (max-width: ${theme.breakpoints.mobile})`]: {
                     fontSize: '10px',
                   },
                 })}
@@ -512,8 +513,8 @@ export default function Main() {
           pt={200}
           gap={20}
           justify="space-between"
-          sx={() => ({
-            '@media (max-width: 400px)': {
+          sx={(theme) => ({
+            [`@media (max-width: ${theme.breakpoints.mobile})`]: {
               paddingTop: '50px',
             },
           })}
@@ -526,8 +527,8 @@ export default function Main() {
           <Flex
             direction="column"
             pt={100}
-            sx={() => ({
-              '@media (max-width: 400px)': {
+            sx={(theme) => ({
+              [`@media (max-width: ${theme.breakpoints.mobile})`]: {
                 paddingTop: '40px',
               },
             })}
@@ -536,8 +537,8 @@ export default function Main() {
               color="rgba(56, 59, 105, 1)"
               size={70}
               fw={700}
-              sx={() => ({
-                '@media (max-width: 400px)': {
+              sx={(theme) => ({
+                [`@media (max-width: ${theme.breakpoints.mobile})`]: {
                   fontSize: '10px',
                 },
               })}
@@ -548,8 +549,8 @@ export default function Main() {
               color="rgba(56, 59, 105, 1)"
               size={18}
               fw={400}
-              sx={() => ({
-                '@media (max-width: 400px)': {
+              sx={(theme) => ({
+                [`@media (max-width: ${theme.breakpoints.mobile})`]: {
                   fontSize: '6px',
                 },
               })}
@@ -565,8 +566,8 @@ export default function Main() {
           pt={200}
           gap={20}
           justify="space-between"
-          sx={() => ({
-            '@media (max-width: 400px)': {
+          sx={(theme) => ({
+            [`@media (max-width: ${theme.breakpoints.mobile})`]: {
               paddingTop: '50px',
             },
           })}
@@ -575,8 +576,8 @@ export default function Main() {
             gap={20}
             direction="column"
             pt={100}
-            sx={() => ({
-              '@media (max-width: 400px)': {
+            sx={(theme) => ({
+              [`@media (max-width: ${theme.breakpoints.mobile})`]: {
                 paddingTop: '40px',
               },
             })}
@@ -585,8 +586,8 @@ export default function Main() {
               color="rgba(56, 59, 105, 1)"
               size={70}
               fw={700}
-              sx={() => ({
-                '@media (max-width: 400px)': {
+              sx={(theme) => ({
+                [`@media (max-width: ${theme.breakpoints.mobile})`]: {
                   fontSize: '10px',
                 },
               })}
@@ -597,8 +598,8 @@ export default function Main() {
               color="rgba(56, 59, 105, 1)"
               size={18}
               fw={400}
-              sx={() => ({
-                '@media (max-width: 400px)': {
+              sx={(theme) => ({
+                [`@media (max-width: ${theme.breakpoints.mobile})`]: {
                   fontSize: '6px',
                 },
               })}

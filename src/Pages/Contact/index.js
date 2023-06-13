@@ -6,13 +6,13 @@ export default function Contact() {
     <Flex
       bg="#FFFBF5"
       p="60px 155px"
-      // gap={120}
-      justify="space-between"
+      gap={120}
+      // justify="space-between"
     >
       <Box pt={45}>
         <Text
           color="primary.0"
-          size="50px"
+          size="sm"
           fw={700}
           mb={30}
         >
@@ -31,7 +31,7 @@ export default function Contact() {
             <TextInput
               placeholder="Tvoje ime"
               label="Ime"
-              size="xl"
+              size="sm"
               variant="filled"
               labelProps={{ style: { color: 'primary.0' } }}
               color="primary.0"
@@ -39,7 +39,7 @@ export default function Contact() {
             <TextInput
               placeholder="Tvoje prezime"
               label="Prezime"
-              size="xl"
+              size="sm"
               variant="filled"
               labelProps={{ style: { color: 'primary.0' } }}
             />
@@ -51,7 +51,7 @@ export default function Contact() {
             <TextInput
               placeholder="Email"
               label="Email"
-              size="xl"
+              size="sm"
               variant="filled"
               labelProps={{ style: { color: 'primary.0' } }}
               color="primary.0"
@@ -59,7 +59,7 @@ export default function Contact() {
             <TextInput
               placeholder="Telefon"
               label="Telefon"
-              size="xl"
+              size="sm"
               variant="filled"
               labelProps={{ style: { color: 'primary.0' } }}
             />
@@ -67,7 +67,7 @@ export default function Contact() {
           <Textarea
             placeholder="Napiši nešto..."
             label="Poruka"
-            size="xl"
+            size="sm"
             variant="filled"
             labelProps={{ style: { color: 'primary.0' } }}
           />
@@ -76,7 +76,8 @@ export default function Contact() {
             variant="subtle"
             color="black"
             fullWidth={false}
-            maw="40%"
+            maw="50%"
+            size="s"
           >
             POŠALJITE NAM UPIT
           </Button>

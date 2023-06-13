@@ -11,7 +11,7 @@ export default function Layout() {
       // style={{ border: '1px solid red' }}
       // maw={1440}
       maw="none"
-      style={{ border: '1px solid red', overflow: 'hidden' }}
+      style={{ overflow: 'hidden' }}
       p={0}
     >
       <Navigation />
