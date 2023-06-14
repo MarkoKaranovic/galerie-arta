@@ -15,6 +15,12 @@ export default function Navigation() {
         justify="space-between"
         p="30px 40px"
         // pl="298px"
+        sx={(theme) => ({
+          [`@media (max-width: ${theme.breakpoints.mobile})`]: {
+            position: 'sticky',
+            padding: '0',
+          },
+        })}
       >
         <Burger
           size="md"

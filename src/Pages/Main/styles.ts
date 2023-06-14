@@ -7,6 +7,9 @@ export const useStyles = createStyles((theme) => ({
     maxHeight: 1080,
 
     position: 'relative',
+    [`@media (max-width: ${theme.breakpoints.mobile})`]: {
+      maxHeight: 300,
+    },
   },
 
   burger: {

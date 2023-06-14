@@ -2,8 +2,7 @@ import { createStyles } from '@mantine/core';
 
 export const useStyles = createStyles((theme) => ({
   container: {
-    paddingTop: 80,
-    paddingBottom: 100,
+    paddingBottom: 50,
     width: '100%',
     // backgroundColor: theme.colors.primaryDark[0],
   },

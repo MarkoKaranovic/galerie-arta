@@ -24,26 +24,25 @@ export default function Main() {
         >
           <Text
             color="white"
-            size="xl"
+            size="120px"
             fw={700}
             sx={(theme) => ({
               [`@media (max-width: ${theme.breakpoints.mobile})`]: {
-                fontSize: theme.fontSizes.xs,
+                fontSize: theme.fontSizes.sm,
               },
             })}
           >
-            ISKUSI ZABAVU, <br /> OKUSI UŽITAK
+            ISKUSI ZABAVU I UŽITAK
           </Text>
         </Flex>
       </BackgroundImage>
       <Flex
-        bg="primary.0"
         p="135px 118px"
         justify="space-between"
         sx={(theme) => ({
           [`@media (max-width: ${theme.breakpoints.mobile})`]: {
             display: 'block',
-            padding: '20px 30px',
+            padding: '0',
           },
         })}
         direction="row"
@@ -53,6 +52,13 @@ export default function Main() {
           gap={50}
           justify="center"
           align="center"
+          sx={(theme) => ({
+            [`@media (max-width: ${theme.breakpoints.mobile})`]: {
+              gap: '20px',
+              background: theme.colors.primary[0],
+              padding: '20px',
+            },
+          })}
         >
           <Image
             src="/assets/palette.png"
@@ -74,17 +80,16 @@ export default function Main() {
           </Text>
 
           <Text
-            size={18}
+            size="xs"
             color="white"
             sx={(theme) => ({
               [`@media (max-width: ${theme.breakpoints.mobile})`]: {
-                fontSize: theme.fontSizes.xs,
+                fontSize: theme.fontSizes.xxs,
+                textAlign: 'center',
               },
             })}
           >
-            Kist u jednoj ruci, čaša u drugoj... <br /> Dopustite da vas ponese zabavna i <br />
-            kreativna atmosfera za stvaranje <br />
-            slike.
+            Ne morate ponijeti ništa. Samo se pojavite spremni za zabavu, a mi ćemo se pobrinut za ostalo.
           </Text>
         </Flex>
         <Flex
@@ -92,9 +97,16 @@ export default function Main() {
           gap={50}
           justify="center"
           align="center"
+          sx={(theme) => ({
+            [`@media (max-width: ${theme.breakpoints.mobile})`]: {
+              gap: '20px',
+              background: 'white',
+              padding: '20px',
+            },
+          })}
         >
           <Image
-            src="/assets/palette.png"
+            src="/assets/glasses.png"
             maw={137}
             h={120}
           />
@@ -106,6 +118,7 @@ export default function Main() {
             sx={(theme) => ({
               [`@media (max-width: ${theme.breakpoints.mobile})`]: {
                 fontSize: theme.fontSizes.xs,
+                color: 'black',
               },
             })}
           >
@@ -113,17 +126,18 @@ export default function Main() {
           </Text>
 
           <Text
-            size={18}
+            size="xs"
             color="white"
             sx={(theme) => ({
               [`@media (max-width: ${theme.breakpoints.mobile})`]: {
-                fontSize: theme.fontSizes.xs,
+                fontSize: theme.fontSizes.xxs,
+                textAlign: 'center',
+                color: 'black',
+                fontWeight: 500,
               },
             })}
           >
-            Kist u jednoj ruci, čaša u drugoj... <br /> Dopustite da vas ponese zabavna i <br />
-            kreativna atmosfera za stvaranje <br />
-            slike.
+            Uz čašu vina, sve je lakše pa tako i potezi kistom. Opustite se uz izbor vina odabaranih slavonskih vinarija
           </Text>
         </Flex>
         <Flex
@@ -131,9 +145,16 @@ export default function Main() {
           gap={50}
           justify="center"
           align="center"
+          sx={(theme) => ({
+            [`@media (max-width: ${theme.breakpoints.mobile})`]: {
+              gap: '20px',
+              background: theme.colors.primary[0],
+              padding: '20px',
+            },
+          })}
         >
           <Image
-            src="/assets/palette.png"
+            src="/assets/paintPicture.png"
             maw={137}
             h={120}
           />
@@ -152,17 +173,18 @@ export default function Main() {
           </Text>
 
           <Text
-            size={18}
+            size="xs"
             color="white"
             sx={(theme) => ({
               [`@media (max-width: ${theme.breakpoints.mobile})`]: {
-                fontSize: theme.fontSizes.xs,
+                fontSize: theme.fontSizes.xxs,
+                textAlign: 'center',
+                fontWeight: 500,
               },
             })}
           >
-            Kist u jednoj ruci, čaša u drugoj... <br /> Dopustite da vas ponese zabavna i <br />
-            kreativna atmosfera za stvaranje <br />
-            slike.
+            Slikarsko iskustvo nije potrebno. Oslobodite svog unutarnjeg Van Gogha i zabavite se u ugodnoj atmosferi
+            našeg studija.
           </Text>
         </Flex>
       </Flex>
@@ -172,7 +194,7 @@ export default function Main() {
         bg="#FFFBF5"
         sx={(theme) => ({
           [`@media (max-width: ${theme.breakpoints.mobile})`]: {
-            padding: '20px 10px',
+            padding: '20px 0 0 0px',
           },
         })}
       >
@@ -191,7 +213,7 @@ export default function Main() {
           sx={(theme) => ({
             [`@media (max-width: ${theme.breakpoints.mobile})`]: {
               display: 'block',
-              padding: '0 40px',
+              padding: '90px 0px 0px 0px',
             },
           })}
         >
@@ -205,11 +227,13 @@ export default function Main() {
               fw={600}
               sx={(theme) => ({
                 [`@media (max-width: ${theme.breakpoints.mobile})`]: {
-                  fontSize: '30px',
+                  fontSize: theme.fontSizes.s,
+                  textAlign: 'center',
+                  fontFamily: 'Teko',
                 },
               })}
             >
-              POVEDI SVOG <br /> PRIJATELJA, PARTNERA <br /> ILI CIJELU EKIPU
+              POVEDI SVOG PRIJATELJA, PARTNERA ILI CIJELU EKIPU
             </Text>
             <Image src="/assets/BiggeSmalls.png" />
           </Flex>
@@ -219,7 +243,8 @@ export default function Main() {
             pt={90}
             sx={(theme) => ({
               [`@media (max-width: ${theme.breakpoints.mobile})`]: {
-                paddingTop: '30px',
+                paddingTop: '0',
+                gap: '10px',
               },
             })}
           >
@@ -227,14 +252,19 @@ export default function Main() {
               size="s"
               color="rgba(56, 59, 105, 1)"
               fw={400}
+              ff="Roboto"
               sx={(theme) => ({
                 [`@media (max-width: ${theme.breakpoints.mobile})`]: {
-                  fontSize: theme.fontSizes.xs,
+                  fontSize: theme.fontSizes.xxs,
+                  textAlign: 'center',
+                  color: 'black',
+                  padding: '20px 24px',
+                  fontWeight: 500,
                 },
               })}
             >
-              Podigli smo ljestvicu iskustva Galeria <br /> Arta i pozivamo Vas da se pridružite <br /> zabavi. Vino se
-              hladi, platno zove, a vibra <br /> je sve samo ne dosadna.
+              Podigli smo ljestvicu iskustva u Galerii Arti i pozivamo Vas da se pridružite zabavi. Vino se hladi,
+              platno zove, a vibra je sve samo ne dosadna.
             </Text>
             <Flex
               direction="column"
@@ -253,6 +283,7 @@ export default function Main() {
                 sx={(theme) => ({
                   [`@media (max-width: ${theme.breakpoints.mobile})`]: {
                     fontSize: '18px',
+                    display: 'none',
                   },
                 })}
               >
@@ -266,6 +297,7 @@ export default function Main() {
                 sx={(theme) => ({
                   [`@media (max-width: ${theme.breakpoints.mobile})`]: {
                     fontSize: '18px',
+                    display: 'none',
                   },
                 })}
               >
@@ -279,10 +311,11 @@ export default function Main() {
         pl={40}
         pr={75}
         direction="column"
-        bg="#FFFBF5"
+        bg="#D9D9D9"
         sx={(theme) => ({
           [`@media (max-width: ${theme.breakpoints.mobile})`]: {
             display: 'block',
+            padding: '0px 24px ',
           },
         })}
       >
@@ -293,7 +326,11 @@ export default function Main() {
           color="rgba(56, 59, 105, 1)"
           sx={(theme) => ({
             [`@media (max-width: ${theme.breakpoints.mobile})`]: {
-              fontSize: '28px',
+              fontSize: theme.fontSizes.sm,
+              paddingLeft: 0,
+              paddingTop: '40px',
+              textTransform: 'uppercase',
+              color: theme.colors.primary[0],
             },
           })}
         >
@@ -305,69 +342,10 @@ export default function Main() {
           pb={200}
           sx={(theme) => ({
             [`@media (max-width: ${theme.breakpoints.mobile})`]: {
-              paddingBottom: '70px',
+              paddingBottom: '0',
             },
           })}
         >
-          {/* <Carousel
-            slideGap="xl"
-            controlSize={20}
-            draggable
-            loop
-            align="center"
-            nextControlIcon={
-              <Image
-                src="/assets/RightArrow.svg"
-                maw={23}
-                mah={40}
-              />
-            }
-            previousControlIcon={
-              <Image
-                src="/assets/LeftArrow.svg"
-                maw={23}
-                mah={40}
-              />
-            }
-          >
-            <Carousel.Slide>
-              <Flex
-                direction="column"
-                justify="center"
-                align="center"
-              >
-                <Image
-                  width="325px"
-                  src="/assets/Frame 46.png"
-                />
-              </Flex>
-            </Carousel.Slide>
-
-            <Carousel.Slide>
-              <Flex
-                direction="column"
-                justify="center"
-                align="center"
-              >
-                <Image
-                  width="325px"
-                  src="/assets/Frame 46.png"
-                />
-              </Flex>
-            </Carousel.Slide>
-            <Carousel.Slide>
-              <Flex
-                direction="column"
-                justify="center"
-                align="center"
-              >
-                <Image
-                  width="325px"
-                  src="/assets/Frame 46.png"
-                />
-              </Flex>
-            </Carousel.Slide>
-          </Carousel> */}
           <TestimonialSlider />
         </Flex>
       </Flex>
@@ -377,18 +355,35 @@ export default function Main() {
         bg="#FFFBF5"
         sx={(theme) => ({
           [`@media (max-width: ${theme.breakpoints.mobile})`]: {
-            padding: '70px 60px',
+            padding: 0,
           },
         })}
       >
         <Flex
           gap={20}
           justify="space-between"
+          sx={(theme) => ({
+            [`@media (max-width: ${theme.breakpoints.mobile})`]: {
+              display: 'block',
+              position: 'relative',
+            },
+          })}
         >
           <Image
             src="/assets/Painting.svg"
             maw={555}
             mah={564}
+            sx={(theme) => ({
+              [`@media (max-width: ${theme.breakpoints.mobile})`]: {
+                position: 'absolute',
+                maxHeight: '432px',
+                isolation: 'isolate',
+                filter: 'blur(1px)',
+                '& img': {
+                  height: '432px !important',
+                },
+              },
+            })}
           />
           <Flex
             direction="column"
@@ -396,7 +391,8 @@ export default function Main() {
             pt={100}
             sx={(theme) => ({
               [`@media (max-width: ${theme.breakpoints.mobile})`]: {
-                paddingTop: '10px',
+                padding: '50px 24px',
+                gap: '50px',
               },
             })}
           >
@@ -407,11 +403,13 @@ export default function Main() {
               color="rgba(56, 59, 105, 1)"
               sx={(theme) => ({
                 [`@media (max-width: ${theme.breakpoints.mobile})`]: {
-                  fontSize: '10px',
+                  fontSize: theme.fontSizes.sm,
+                  zIndex: 1,
+                  textAlign: 'center',
                 },
               })}
             >
-              NEŠTO POSEBNO I ZA <br /> MALENE
+              NEŠTO POSEBNO I ZA MALENE
             </Text>
             <Text
               size={18}
@@ -420,13 +418,16 @@ export default function Main() {
               color="rgba(56, 59, 105, 1)"
               sx={(theme) => ({
                 [`@media (max-width: ${theme.breakpoints.mobile})`]: {
-                  fontSize: '6px',
+                  fontSize: '16px',
+                  zIndex: 1,
+                  textAlign: 'center',
+                  color: 'white',
                 },
               })}
             >
-              Naše likovne radionice su puno više od ubičnih umjetničkih lekcija - <br /> ovdje se vaša djeca mogu
-              izraziti, istražiti svoju kreativnost i pronaći <br /> nove prijatelje. Naši iskusni instruktori vodit će
-              ih kroz sve korake <br /> stvaranja, od ideje do konačnog djela.
+              Naše likovne radionice su puno više od običnih umjetničkih lekcija - ovdje se vaša djeca mogu iraziti,
+              istražiti svoju kreativnost i pronaći nove prrijatelje. Naši iskusni instruktroi vodit će ih kroz sve
+              korake stvaranja, od ideje do konačnog djela.
             </Text>
           </Flex>
         </Flex>
@@ -436,7 +437,9 @@ export default function Main() {
           justify="space-between"
           sx={(theme) => ({
             [`@media (max-width: ${theme.breakpoints.mobile})`]: {
-              paddingTop: '50px',
+              display: 'block',
+              position: 'relative',
+              padding: 0,
             },
           })}
         >
@@ -444,6 +447,12 @@ export default function Main() {
             direction="column"
             gap={20}
             pt={100}
+            sx={(theme) => ({
+              [`@media (max-width: ${theme.breakpoints.mobile})`]: {
+                padding: '50px 24px',
+                gap: '50px',
+              },
+            })}
           >
             <Text
               color="rgba(8, 68, 83, 1) "
@@ -451,7 +460,9 @@ export default function Main() {
               fw={700}
               sx={(theme) => ({
                 [`@media (max-width: ${theme.breakpoints.mobile})`]: {
-                  fontSize: '10px',
+                  fontSize: '16px',
+                  position: 'relative',
+                  zIndex: 1,
                 },
               })}
             >
@@ -460,29 +471,38 @@ export default function Main() {
             <Text
               size={60}
               fw={700}
-              color="rgba(56, 59, 105, 1)"
+              color="primary.0"
               sx={(theme) => ({
                 [`@media (max-width: ${theme.breakpoints.mobile})`]: {
-                  fontSize: '10px',
+                  fontSize: '36px',
+                  textAlign: 'center',
+                  fontWeight: 600,
+                  position: 'relative',
+                  zIndex: 1,
                 },
               })}
             >
-              NEKA BUDE SAMO <br /> NA POZIVNICU
+              NEKA BUDE SAMO NA POZIVNICU
             </Text>
             <Box>
               <Text
                 size={18}
                 fw={400}
+                ff="Roboto"
                 color="rgba(56, 59, 105, 1)"
                 sx={(theme) => ({
                   [`@media (max-width: ${theme.breakpoints.mobile})`]: {
-                    fontSize: '6px',
+                    fontSize: '16px',
+                    textAlign: 'center',
+                    fontWeight: 500,
+                    position: 'relative',
+                    zIndex: 1,
+                    color: 'white',
                   },
                 })}
               >
-                Znamo kako organizirati zabavu, pa zašto nam ne biste dopustili da <br /> organiziramo vašu? Zauzmite
-                cijeli atelje, odaberite tematsku sliku <br />
-                za svoje goste i prepustite se jednom od naših likovnih instruktora da <br />
+                Znamo kako organizirati zabavu, pa zašto nam ne biste dopustili da organiziramo vašu? Zauzmite cijeli
+                atelje, odaberite tematsku sliku za svoje goste i prepustite se jednom od naših likovnih instruktora da
                 vas vodi do dobrog provoda.
               </Text>
               <Text
@@ -494,6 +514,7 @@ export default function Main() {
                 sx={(theme) => ({
                   [`@media (max-width: ${theme.breakpoints.mobile})`]: {
                     fontSize: '10px',
+                    display: 'none',
                   },
                 })}
               >
@@ -505,15 +526,30 @@ export default function Main() {
             src="/assets/cake.svg"
             maw={555}
             mah={564}
+            alt="With default placeholder"
+            withPlaceholder
+            sx={(theme) => ({
+              [`@media (max-width: ${theme.breakpoints.mobile})`]: {
+                position: 'absolute',
+                top: 0,
+                '& img': {
+                  height: '455px !important',
+                },
+                filter: 'blur(1px)',
+              },
+            })}
           />
         </Flex>
+
         <Flex
           pt={200}
           gap={20}
           justify="space-between"
           sx={(theme) => ({
             [`@media (max-width: ${theme.breakpoints.mobile})`]: {
-              paddingTop: '50px',
+              display: 'block',
+              position: 'relative',
+              padding: 0,
             },
           })}
         >
@@ -521,23 +557,39 @@ export default function Main() {
             src="/assets/paintWomen.svg"
             maw={555}
             mah={564}
+            sx={(theme) => ({
+              [`@media (max-width: ${theme.breakpoints.mobile})`]: {
+                position: 'absolute',
+                maxHeight: '372px',
+                isolation: 'isolate',
+                filter: 'blur(1px)',
+                '& img': {
+                  height: '372px !important',
+                },
+              },
+            })}
           />
           <Flex
             direction="column"
             pt={100}
             sx={(theme) => ({
               [`@media (max-width: ${theme.breakpoints.mobile})`]: {
-                paddingTop: '40px',
+                padding: '50px 24px',
+                gap: '50px',
               },
             })}
           >
             <Text
-              color="rgba(56, 59, 105, 1)"
+              color="primary.0"
               size={70}
               fw={700}
               sx={(theme) => ({
                 [`@media (max-width: ${theme.breakpoints.mobile})`]: {
-                  fontSize: '10px',
+                  fontSize: '36px',
+                  textAlign: 'center',
+                  fontWeight: 600,
+                  position: 'relative',
+                  zIndex: 1,
                 },
               })}
             >
@@ -549,14 +601,18 @@ export default function Main() {
               fw={400}
               sx={(theme) => ({
                 [`@media (max-width: ${theme.breakpoints.mobile})`]: {
-                  fontSize: '6px',
+                  fontSize: '16px',
+                  textAlign: 'center',
+                  fontWeight: 500,
+                  position: 'relative',
+                  zIndex: 1,
+                  color: 'white',
                 },
               })}
             >
-              Na našim keramičkim radionicama ćete pronaći sve što vam treba <br /> za stvaranje unikatnih umjetničkih
-              djela od gline. Uz mnošto <br /> zabavnih aktivnosti, tehnika i tečajeva, naša keramička radionica <br />{' '}
-              nudi nezaboravno iskustvo za sve uzraste. Dođite i stvorite nešto <br /> posebno - vaša kreativnost ne
-              poznaje granice!
+              Na našim keramičkim radionicama ćete pronaći sve što vam treba za stvaranje unikatnih umjetničkih djela od
+              gline. Uz mnošto zabavnih aktivnosti, tehnika i tečajeva, naša keramička radionica nudi nezaboravno
+              iskustvo za sve uzraste. Dođite i stvorite nešto posebno - vaša kreativnost ne poznaje granice!
             </Text>
           </Flex>
         </Flex>
@@ -566,7 +622,9 @@ export default function Main() {
           justify="space-between"
           sx={(theme) => ({
             [`@media (max-width: ${theme.breakpoints.mobile})`]: {
-              paddingTop: '50px',
+              display: 'block',
+              position: 'relative',
+              padding: 0,
             },
           })}
         >
@@ -576,17 +634,19 @@ export default function Main() {
             pt={100}
             sx={(theme) => ({
               [`@media (max-width: ${theme.breakpoints.mobile})`]: {
-                paddingTop: '40px',
+                padding: '50px 24px',
+                gap: 30,
               },
             })}
           >
             <Text
-              color="rgba(56, 59, 105, 1)"
+              color="primary.0"
               size={70}
               fw={700}
               sx={(theme) => ({
                 [`@media (max-width: ${theme.breakpoints.mobile})`]: {
-                  fontSize: '10px',
+                  fontSize: '36px',
+                  fontWeight: 600,
                 },
               })}
             >
@@ -598,12 +658,13 @@ export default function Main() {
               fw={400}
               sx={(theme) => ({
                 [`@media (max-width: ${theme.breakpoints.mobile})`]: {
-                  fontSize: '6px',
+                  fontSize: '16px',
+                  textAlign: 'center',
+                  fontWeight: 600,
                 },
               })}
             >
-              Iznenadite svoje najmilije posebnim poklonom, <br /> odaberite neku od naših usluga i razveselite <br />{' '}
-              dragu osobu.
+              Iznenadite svoje najmilije posebnim poklonom, odaberite neku od naših usluga i razveselite dragu osobu.
             </Text>
           </Flex>
           <Image

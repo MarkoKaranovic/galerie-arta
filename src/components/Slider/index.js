@@ -17,6 +17,8 @@ export default function TestimonialSlider() {
       <Carousel
         mx={60}
         withIndicators
+        loop
+        draggable
         styles={{
           viewport: {
             overflow: 'initial',
@@ -25,26 +27,26 @@ export default function TestimonialSlider() {
             alignItems: 'center',
           },
           control: {
-            background: 'none',
+            background: '#D9D9D9;',
             border: 'none',
             [`@media (max-width: 576px)`]: {
-              width: 40,
-              height: 40,
-              marginLeft: -40,
-              marginRight: -40,
+              // width: 40,
+              // height: 40,
+              // marginLeft: 40,
+              // marginRight: 40,
             },
           },
           controls: {
             top: 0,
             bottom: 0,
-            margin: 'auto',
+            // margin: 'auto',
 
             [`@media (max-width:576px)`]: {
               top: -100,
             },
 
             [`@media (max-width: 1200px)`]: {
-              top: -600,
+              top: 450,
             },
           },
           indicators: {
@@ -56,8 +58,8 @@ export default function TestimonialSlider() {
             width: '100%',
           },
         }}
-        nextControlIcon={<Image src="/assets/images/right-arrow.svg" />}
-        previousControlIcon={<Image src="/assets/images/left-arrow.svg" />}
+        nextControlIcon={<Image src="/assets/RightArrow.svg" />}
+        previousControlIcon={<Image src="/assets/LeftArrow.svg" />}
       >
         <Carousel.Slide>
           <CarouselCard

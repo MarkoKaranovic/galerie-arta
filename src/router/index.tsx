@@ -15,10 +15,10 @@ export const router = createBrowserRouter([
     element: (
       <MantineProvider
         theme={{
-          fontFamily: 'Teko',
-          headings: {
-            fontFamily: 'Teko',
-          },
+          // fontFamily: 'Teko',
+          // headings: {
+          //   fontFamily: 'Teko',
+          // },
           fontSizes: {
             xl: '120px',
             lg: '70px',
@@ -26,6 +26,7 @@ export const router = createBrowserRouter([
             sm: '30px',
             s: '24px',
             xs: '18px',
+            xxs: '14px',
           },
           colors: {
             primary: ['#084453', '#383B69', '383B69'],
@@ -38,7 +39,7 @@ export const router = createBrowserRouter([
             md: '360px',
             lg: '720px',
             xl: '1440px',
-            mobile: '360px',
+            mobile: '393px',
             tablet: '720px',
             desktop: '1440px',
           },

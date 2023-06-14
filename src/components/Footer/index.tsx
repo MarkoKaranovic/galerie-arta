@@ -5,11 +5,31 @@ export default function Footer() {
     <Box
       bg="rgba(8, 68, 83, 1)"
       p="100px 40px"
+      sx={(theme) => ({
+        [`@media (max-width: ${theme.breakpoints.mobile})`]: {
+          // display: '',
+          padding: '50px 24px',
+        },
+      })}
     >
-      <Flex justify="space-between">
+      <Flex
+        justify="space-between"
+        sx={(theme) => ({
+          [`@media (max-width: ${theme.breakpoints.mobile})`]: {
+            padding: '0',
+            display: 'grid',
+            gap: '30px',
+          },
+        })}
+      >
         <Flex
           gap={15}
           direction="column"
+          sx={(theme) => ({
+            [`@media (max-width: ${theme.breakpoints.mobile})`]: {
+              display: 'none',
+            },
+          })}
         >
           <Text color="white">O NAMA</Text>
           <Text color="white">REZERVIRAJ KARTU</Text>
@@ -18,6 +38,12 @@ export default function Footer() {
         <Flex
           gap={15}
           direction="column"
+          sx={(theme) => ({
+            [`@media (max-width: ${theme.breakpoints.mobile})`]: {
+              display: 'none',
+              padding: '0',
+            },
+          })}
         >
           <Text color="white">KONTAKT</Text>
           <Text color="white">USLUGE</Text>
@@ -69,28 +95,36 @@ export default function Footer() {
         justify="flex-start"
         gap={50}
         pt={50}
+        sx={(theme) => ({
+          [`@media (max-width: ${theme.breakpoints.mobile})`]: {
+            display: 'block',
+            padding: '0',
+          },
+        })}
       >
-        <Text
-          color="white"
-          size={18}
-          fw={600}
-        >
-          © 2023 GALERIA.ARTA
-        </Text>
-        <Text
-          color="white"
-          size={18}
-          fw={600}
-        >
-          OPĆI UVJETI
-        </Text>
+        {/* <Flex justify="space-between">
+          <Text
+            color="white"
+            size={18}
+            fw={600}
+          >
+            © 2023 GALERIA.ARTA
+          </Text>
+          <Text
+            color="white"
+            size={18}
+            fw={600}
+          >
+            OPĆI UVJETI
+          </Text>
+        </Flex>
         <Text
           color="white"
           size={18}
           fw={600}
         >
           PRAVILA PRIVATNOSTI OSOBNIH PODATAKA
-        </Text>
+        </Text> */}
       </Flex>
     </Box>
   );
