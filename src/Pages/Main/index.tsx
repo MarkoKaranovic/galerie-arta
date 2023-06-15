@@ -22,29 +22,12 @@ export default function Main() {
           align="center"
           h="100%"
         >
-          <Text
-            color="white"
-            size="120px"
-            fw={700}
-            sx={(theme) => ({
-              [`@media (max-width: ${theme.breakpoints.mobile})`]: {
-                fontSize: theme.fontSizes.sm,
-              },
-            })}
-          >
-            ISKUSI ZABAVU I UŽITAK
-          </Text>
+          <Text className={classes.heroTitle}>ISKUSI ZABAVU I UŽITAK</Text>
         </Flex>
       </BackgroundImage>
       <Flex
-        p="135px 118px"
         justify="space-between"
-        sx={(theme) => ({
-          [`@media (max-width: ${theme.breakpoints.mobile})`]: {
-            display: 'block',
-            padding: '0',
-          },
-        })}
+        className={classes.cardWrapper}
         direction="row"
       >
         <Flex
@@ -52,13 +35,7 @@ export default function Main() {
           gap={50}
           justify="center"
           align="center"
-          sx={(theme) => ({
-            [`@media (max-width: ${theme.breakpoints.mobile})`]: {
-              gap: '20px',
-              background: theme.colors.primary[0],
-              padding: '20px',
-            },
-          })}
+          className={classes.animationCard}
         >
           <Image
             src="/assets/palette.png"
@@ -70,11 +47,7 @@ export default function Main() {
             color="white"
             ff="Teko"
             fw={600}
-            sx={(theme) => ({
-              [`@media (max-width: ${theme.breakpoints.mobile})`]: {
-                fontSize: theme.fontSizes.xs,
-              },
-            })}
+            className={classes.animationCardTitle}
           >
             KREATIVNI I VESELI SATI
           </Text>
@@ -82,12 +55,7 @@ export default function Main() {
           <Text
             size="xs"
             color="white"
-            sx={(theme) => ({
-              [`@media (max-width: ${theme.breakpoints.mobile})`]: {
-                fontSize: theme.fontSizes.xxs,
-                textAlign: 'center',
-              },
-            })}
+            className={classes.animationCardDescription}
           >
             Ne morate ponijeti ništa. Samo se pojavite spremni za zabavu, a mi ćemo se pobrinut za ostalo.
           </Text>
@@ -97,11 +65,10 @@ export default function Main() {
           gap={50}
           justify="center"
           align="center"
+          className={classes.animationCard}
           sx={(theme) => ({
             [`@media (max-width: ${theme.breakpoints.mobile})`]: {
-              gap: '20px',
               background: 'white',
-              padding: '20px',
             },
           })}
         >
@@ -115,9 +82,9 @@ export default function Main() {
             color="white"
             ff="Teko"
             fw={600}
+            className={classes.animationCardTitle}
             sx={(theme) => ({
               [`@media (max-width: ${theme.breakpoints.mobile})`]: {
-                fontSize: theme.fontSizes.xs,
                 color: 'black',
               },
             })}
@@ -128,12 +95,10 @@ export default function Main() {
           <Text
             size="xs"
             color="white"
+            className={classes.animationCardDescription}
             sx={(theme) => ({
               [`@media (max-width: ${theme.breakpoints.mobile})`]: {
-                fontSize: theme.fontSizes.xxs,
-                textAlign: 'center',
                 color: 'black',
-                fontWeight: 500,
               },
             })}
           >
@@ -145,13 +110,7 @@ export default function Main() {
           gap={50}
           justify="center"
           align="center"
-          sx={(theme) => ({
-            [`@media (max-width: ${theme.breakpoints.mobile})`]: {
-              gap: '20px',
-              background: theme.colors.primary[0],
-              padding: '20px',
-            },
-          })}
+          className={classes.animationCard}
         >
           <Image
             src="/assets/paintPicture.png"
@@ -163,11 +122,7 @@ export default function Main() {
             color="white"
             ff="Teko"
             fw={600}
-            sx={(theme) => ({
-              [`@media (max-width: ${theme.breakpoints.mobile})`]: {
-                fontSize: theme.fontSizes.xs,
-              },
-            })}
+            className={classes.animationCardTitle}
           >
             KREATIVNI I VESELI SATI
           </Text>
@@ -175,13 +130,7 @@ export default function Main() {
           <Text
             size="xs"
             color="white"
-            sx={(theme) => ({
-              [`@media (max-width: ${theme.breakpoints.mobile})`]: {
-                fontSize: theme.fontSizes.xxs,
-                textAlign: 'center',
-                fontWeight: 500,
-              },
-            })}
+            className={classes.animationCardDescription}
           >
             Slikarsko iskustvo nije potrebno. Oslobodite svog unutarnjeg Van Gogha i zabavite se u ugodnoj atmosferi
             našeg studija.
@@ -189,52 +138,22 @@ export default function Main() {
         </Flex>
       </Flex>
 
-      <Box
-        p="61px 40px"
-        bg="#FFFBF5"
-        sx={(theme) => ({
-          [`@media (max-width: ${theme.breakpoints.mobile})`]: {
-            padding: '20px 0 0 0px',
-          },
-        })}
-      >
+      <Box className={classes.inviteWrapper}>
         <Image
           pos="absolute"
           maw={287}
           src="/assets/brushMarker.svg"
-          // zIndex={-1}
         />
         <Flex
-          pos="relative"
-          // zIndex={1}
-          p="0 80px"
           gap={86}
           justify="space-between"
-          sx={(theme) => ({
-            [`@media (max-width: ${theme.breakpoints.mobile})`]: {
-              display: 'block',
-              padding: '90px 0px 0px 0px',
-            },
-          })}
+          className={classes.inviteBox}
         >
           <Flex
             direction="column"
             gap={55}
           >
-            <Text
-              size={70}
-              color="rgba(56, 59, 105, 1)"
-              fw={600}
-              sx={(theme) => ({
-                [`@media (max-width: ${theme.breakpoints.mobile})`]: {
-                  fontSize: theme.fontSizes.s,
-                  textAlign: 'center',
-                  fontFamily: 'Teko',
-                },
-              })}
-            >
-              POVEDI SVOG PRIJATELJA, PARTNERA ILI CIJELU EKIPU
-            </Text>
+            <Text className={classes.inviteTitle}>POVEDI SVOG PRIJATELJA, PARTNERA ILI CIJELU EKIPU</Text>
             <Image src="/assets/BiggeSmalls.png" />
           </Flex>
           <Flex
@@ -248,21 +167,7 @@ export default function Main() {
               },
             })}
           >
-            <Text
-              size="s"
-              color="rgba(56, 59, 105, 1)"
-              fw={400}
-              ff="Roboto"
-              sx={(theme) => ({
-                [`@media (max-width: ${theme.breakpoints.mobile})`]: {
-                  fontSize: theme.fontSizes.xxs,
-                  textAlign: 'center',
-                  color: 'black',
-                  padding: '20px 24px',
-                  fontWeight: 500,
-                },
-              })}
-            >
+            <Text className={classes.inviteDescription}>
               Podigli smo ljestvicu iskustva u Galerii Arti i pozivamo Vas da se pridružite zabavi. Vino se hladi,
               platno zove, a vibra je sve samo ne dosadna.
             </Text>
@@ -282,7 +187,6 @@ export default function Main() {
                 fw={500}
                 sx={(theme) => ({
                   [`@media (max-width: ${theme.breakpoints.mobile})`]: {
-                    fontSize: '18px',
                     display: 'none',
                   },
                 })}
@@ -296,7 +200,6 @@ export default function Main() {
                 underline
                 sx={(theme) => ({
                   [`@media (max-width: ${theme.breakpoints.mobile})`]: {
-                    fontSize: '18px',
                     display: 'none',
                   },
                 })}
@@ -308,43 +211,13 @@ export default function Main() {
         </Flex>
       </Box>
       <Flex
-        pl={40}
-        pr={75}
         direction="column"
-        bg="#D9D9D9"
-        sx={(theme) => ({
-          [`@media (max-width: ${theme.breakpoints.mobile})`]: {
-            display: 'block',
-            padding: '0px 24px ',
-          },
-        })}
+        className={classes.eventWrapper}
       >
-        <Text
-          size={70}
-          fw={600}
-          pl={80}
-          color="rgba(56, 59, 105, 1)"
-          sx={(theme) => ({
-            [`@media (max-width: ${theme.breakpoints.mobile})`]: {
-              fontSize: theme.fontSizes.sm,
-              paddingLeft: 0,
-              paddingTop: '40px',
-              textTransform: 'uppercase',
-              color: theme.colors.primary[0],
-            },
-          })}
-        >
-          Kalendar
-        </Text>
+        <Text className={classes.eventTitle}>Kalendar</Text>
         <Flex
           justify="center"
-          pt={33}
-          pb={200}
-          sx={(theme) => ({
-            [`@media (max-width: ${theme.breakpoints.mobile})`]: {
-              paddingBottom: '0',
-            },
-          })}
+          className={classes.eventSliderWrapper}
         >
           <TestimonialSlider />
         </Flex>
@@ -362,68 +235,28 @@ export default function Main() {
         <Flex
           gap={20}
           justify="space-between"
-          sx={(theme) => ({
-            [`@media (max-width: ${theme.breakpoints.mobile})`]: {
-              display: 'block',
-              position: 'relative',
-            },
-          })}
+          className={classes.servicesWrapper}
         >
           <Image
             src="/assets/Painting.svg"
             maw={555}
             mah={564}
-            sx={(theme) => ({
-              [`@media (max-width: ${theme.breakpoints.mobile})`]: {
-                position: 'absolute',
-                maxHeight: '432px',
-                isolation: 'isolate',
-                filter: 'blur(1px)',
-                '& img': {
-                  height: '432px !important',
-                },
-              },
-            })}
+            className={classes.servicesImage}
           />
           <Flex
             direction="column"
             gap={20}
-            pt={100}
-            sx={(theme) => ({
-              [`@media (max-width: ${theme.breakpoints.mobile})`]: {
-                padding: '50px 24px',
-                gap: '50px',
-              },
-            })}
+            className={classes.servicesTextWrapper}
           >
             <Text
-              size={50}
-              fw={700}
               ff="Teko"
-              color="rgba(56, 59, 105, 1)"
-              sx={(theme) => ({
-                [`@media (max-width: ${theme.breakpoints.mobile})`]: {
-                  fontSize: theme.fontSizes.sm,
-                  zIndex: 1,
-                  textAlign: 'center',
-                },
-              })}
+              className={classes.servicesTitle}
             >
               NEŠTO POSEBNO I ZA MALENE
             </Text>
             <Text
-              size={18}
-              fw={400}
               ff="Roboto"
-              color="rgba(56, 59, 105, 1)"
-              sx={(theme) => ({
-                [`@media (max-width: ${theme.breakpoints.mobile})`]: {
-                  fontSize: '16px',
-                  zIndex: 1,
-                  textAlign: 'center',
-                  color: 'white',
-                },
-              })}
+              className={classes.servicesParagprah}
             >
               Naše likovne radionice su puno više od običnih umjetničkih lekcija - ovdje se vaša djeca mogu iraziti,
               istražiti svoju kreativnost i pronaći nove prrijatelje. Naši iskusni instruktroi vodit će ih kroz sve
@@ -433,26 +266,22 @@ export default function Main() {
         </Flex>
         <Flex
           gap={20}
-          pt={150}
           justify="space-between"
-          sx={(theme) => ({
-            [`@media (max-width: ${theme.breakpoints.mobile})`]: {
-              display: 'block',
-              position: 'relative',
-              padding: 0,
-            },
-          })}
+          className={classes.servicesWrapper}
         >
+          <Image
+            src="/assets/cake.svg"
+            maw={555}
+            mah={564}
+            alt="With default placeholder"
+            withPlaceholder
+            className={classes.servicesImage}
+          />
           <Flex
             direction="column"
             gap={20}
             pt={100}
-            sx={(theme) => ({
-              [`@media (max-width: ${theme.breakpoints.mobile})`]: {
-                padding: '50px 24px',
-                gap: '50px',
-              },
-            })}
+            className={classes.servicesTextWrapper}
           >
             <Text
               color="rgba(8, 68, 83, 1) "
@@ -468,38 +297,11 @@ export default function Main() {
             >
               #PARTYGOALS
             </Text>
-            <Text
-              size={60}
-              fw={700}
-              color="primary.0"
-              sx={(theme) => ({
-                [`@media (max-width: ${theme.breakpoints.mobile})`]: {
-                  fontSize: '36px',
-                  textAlign: 'center',
-                  fontWeight: 600,
-                  position: 'relative',
-                  zIndex: 1,
-                },
-              })}
-            >
-              NEKA BUDE SAMO NA POZIVNICU
-            </Text>
+            <Text className={classes.servicesTitle}>NEKA BUDE SAMO NA POZIVNICU</Text>
             <Box>
               <Text
-                size={18}
-                fw={400}
                 ff="Roboto"
-                color="rgba(56, 59, 105, 1)"
-                sx={(theme) => ({
-                  [`@media (max-width: ${theme.breakpoints.mobile})`]: {
-                    fontSize: '16px',
-                    textAlign: 'center',
-                    fontWeight: 500,
-                    position: 'relative',
-                    zIndex: 1,
-                    color: 'white',
-                  },
-                })}
+                className={classes.servicesParagprah}
               >
                 Znamo kako organizirati zabavu, pa zašto nam ne biste dopustili da organiziramo vašu? Zauzmite cijeli
                 atelje, odaberite tematsku sliku za svoje goste i prepustite se jednom od naših likovnih instruktora da
@@ -522,94 +324,25 @@ export default function Main() {
               </Text>
             </Box>
           </Flex>
-          <Image
-            src="/assets/cake.svg"
-            maw={555}
-            mah={564}
-            alt="With default placeholder"
-            withPlaceholder
-            sx={(theme) => ({
-              [`@media (max-width: ${theme.breakpoints.mobile})`]: {
-                position: 'absolute',
-                top: 0,
-                '& img': {
-                  height: '455px !important',
-                },
-                filter: 'blur(1px)',
-              },
-            })}
-          />
         </Flex>
 
         <Flex
-          pt={200}
           gap={20}
           justify="space-between"
-          sx={(theme) => ({
-            [`@media (max-width: ${theme.breakpoints.mobile})`]: {
-              display: 'block',
-              position: 'relative',
-              padding: 0,
-            },
-          })}
+          className={classes.servicesWrapper}
         >
           <Image
             src="/assets/paintWomen.svg"
             maw={555}
             mah={564}
-            sx={(theme) => ({
-              [`@media (max-width: ${theme.breakpoints.mobile})`]: {
-                position: 'absolute',
-                maxHeight: '372px',
-                isolation: 'isolate',
-                filter: 'blur(1px)',
-                '& img': {
-                  height: '372px !important',
-                },
-              },
-            })}
+            className={classes.servicesImage}
           />
           <Flex
             direction="column"
-            pt={100}
-            sx={(theme) => ({
-              [`@media (max-width: ${theme.breakpoints.mobile})`]: {
-                padding: '50px 24px',
-                gap: '50px',
-              },
-            })}
+            className={classes.servicesTextWrapper}
           >
-            <Text
-              color="primary.0"
-              size={70}
-              fw={700}
-              sx={(theme) => ({
-                [`@media (max-width: ${theme.breakpoints.mobile})`]: {
-                  fontSize: '36px',
-                  textAlign: 'center',
-                  fontWeight: 600,
-                  position: 'relative',
-                  zIndex: 1,
-                },
-              })}
-            >
-              A KERAMIKA?
-            </Text>
-            <Text
-              color="rgba(56, 59, 105, 1)"
-              size={18}
-              fw={400}
-              sx={(theme) => ({
-                [`@media (max-width: ${theme.breakpoints.mobile})`]: {
-                  fontSize: '16px',
-                  textAlign: 'center',
-                  fontWeight: 500,
-                  position: 'relative',
-                  zIndex: 1,
-                  color: 'white',
-                },
-              })}
-            >
+            <Text className={classes.servicesTitle}>A KERAMIKA?</Text>
+            <Text className={classes.servicesParagprah}>
               Na našim keramičkim radionicama ćete pronaći sve što vam treba za stvaranje unikatnih umjetničkih djela od
               gline. Uz mnošto zabavnih aktivnosti, tehnika i tečajeva, naša keramička radionica nudi nezaboravno
               iskustvo za sve uzraste. Dođite i stvorite nešto posebno - vaša kreativnost ne poznaje granice!
@@ -617,53 +350,17 @@ export default function Main() {
           </Flex>
         </Flex>
         <Flex
-          pt={200}
           gap={20}
           justify="space-between"
-          sx={(theme) => ({
-            [`@media (max-width: ${theme.breakpoints.mobile})`]: {
-              display: 'block',
-              position: 'relative',
-              padding: 0,
-            },
-          })}
+          className={classes.giftWrapper}
         >
           <Flex
             gap={20}
             direction="column"
-            pt={100}
-            sx={(theme) => ({
-              [`@media (max-width: ${theme.breakpoints.mobile})`]: {
-                padding: '50px 24px',
-                gap: 30,
-              },
-            })}
+            className={classes.giftTextWrapper}
           >
-            <Text
-              color="primary.0"
-              size={70}
-              fw={700}
-              sx={(theme) => ({
-                [`@media (max-width: ${theme.breakpoints.mobile})`]: {
-                  fontSize: '36px',
-                  fontWeight: 600,
-                },
-              })}
-            >
-              POKOLN BON
-            </Text>
-            <Text
-              color="rgba(56, 59, 105, 1)"
-              size={18}
-              fw={400}
-              sx={(theme) => ({
-                [`@media (max-width: ${theme.breakpoints.mobile})`]: {
-                  fontSize: '16px',
-                  textAlign: 'center',
-                  fontWeight: 600,
-                },
-              })}
-            >
+            <Text className={classes.giftTitle}>POKOLN BON</Text>
+            <Text className={classes.giftParagraph}>
               Iznenadite svoje najmilije posebnim poklonom, odaberite neku od naših usluga i razveselite dragu osobu.
             </Text>
           </Flex>

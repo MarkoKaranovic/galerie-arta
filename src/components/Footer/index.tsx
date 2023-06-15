@@ -7,7 +7,6 @@ export default function Footer() {
       p="100px 40px"
       sx={(theme) => ({
         [`@media (max-width: ${theme.breakpoints.mobile})`]: {
-          // display: '',
           padding: '50px 24px',
         },
       })}

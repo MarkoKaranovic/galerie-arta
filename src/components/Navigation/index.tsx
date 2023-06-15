@@ -17,8 +17,13 @@ export default function Navigation() {
         // pl="298px"
         sx={(theme) => ({
           [`@media (max-width: ${theme.breakpoints.mobile})`]: {
-            position: 'sticky',
-            padding: '0',
+            position: 'fixed',
+            backgroundColor: 'white',
+            // background: 'none',
+            padding: 10,
+            zIndex: 1,
+            width: '100%',
+            opacity: 0.9,
           },
         })}
       >
