@@ -22,6 +22,8 @@ export const useStyles = createStyles((theme) => ({
   },
 
   cardWrapper: {
+    padding: '85px 170px',
+    background: theme.colors.primary[0],
     [`@media (max-width: ${theme.breakpoints.mobile})`]: {
       display: 'block',
       padding: '0',
@@ -29,7 +31,6 @@ export const useStyles = createStyles((theme) => ({
   },
 
   animationCard: {
-    padding: '135px 118px',
     [`@media (max-width: ${theme.breakpoints.mobile})`]: {
       gap: '20px',
       background: theme.colors.primary[0],
@@ -37,9 +38,11 @@ export const useStyles = createStyles((theme) => ({
     },
   },
   animationCardTitle: {
+    fontSize: '30px',
     [`@media (max-width: ${theme.breakpoints.mobile})`]: { fontSize: theme.fontSizes.xs },
   },
   animationCardDescription: {
+    fontSize: theme.fontSizes.s,
     [`@media (max-width: ${theme.breakpoints.mobile})`]: {
       fontSize: theme.fontSizes.xxs,
       textAlign: 'center',
@@ -48,7 +51,7 @@ export const useStyles = createStyles((theme) => ({
   },
 
   inviteWrapper: {
-    padding: '61px 40px',
+    position: 'relative',
     backgroundColor: '#FFFBF5',
     [`@media (max-width: ${theme.breakpoints.mobile})`]: {
       padding: '20px 0 0 0px',
@@ -57,7 +60,7 @@ export const useStyles = createStyles((theme) => ({
 
   inviteBox: {
     position: 'relative',
-    padding: '0 80px',
+    padding: '100px 158px',
     [`@media (max-width: ${theme.breakpoints.mobile})`]: {
       display: 'block',
       padding: '90px 0px 0px 0px',
@@ -68,6 +71,8 @@ export const useStyles = createStyles((theme) => ({
     fontSize: '70px',
     color: theme.colors.primary[1],
     fontWeight: 600,
+    lineHeight: '150%',
+    fontStyle: 'normal',
     [`@media (max-width: ${theme.breakpoints.mobile})`]: {
       fontSize: theme.fontSizes.s,
       textAlign: 'center',
@@ -92,8 +97,9 @@ export const useStyles = createStyles((theme) => ({
   eventWrapper: {
     paddingLeft: '40px',
     paddingRight: '75px',
-    backgroundColor: '#D9D9D9',
+    backgroundColor: theme.colors.secondary[0],
     [`@media (max-width: ${theme.breakpoints.mobile})`]: {
+      backgroundColor: '#D9D9D9',
       display: 'block',
       padding: '0px 24px ',
     },
@@ -115,14 +121,13 @@ export const useStyles = createStyles((theme) => ({
 
   eventSliderWrapper: {
     paddingTop: 33,
-    paddingBottom: 200,
     [`@media (max-width: ${theme.breakpoints.mobile})`]: {
       paddingBottom: '0',
     },
   },
 
   servicesWrapper: {
-    paddingTop: '200px',
+    paddingTop: '100px',
     [`@media (max-width: ${theme.breakpoints.mobile})`]: {
       display: 'block',
       position: 'relative',
@@ -142,7 +147,6 @@ export const useStyles = createStyles((theme) => ({
   },
 
   servicesTextWrapper: {
-    paddingTop: '100px',
     [`@media (max-width: ${theme.breakpoints.mobile})`]: {
       padding: '50px 24px',
       gap: '50px',
@@ -150,10 +154,12 @@ export const useStyles = createStyles((theme) => ({
   },
 
   servicesTitle: {
-    color: theme.colors.primary[0],
+    color: theme.colors.primary[1],
     fontSize: '70px',
     fontWeight: 700,
+    fontFamily: theme.fontFamily,
     [`@media (max-width: ${theme.breakpoints.mobile})`]: {
+      color: theme.colors.primary[0],
       fontSize: '36px',
       textAlign: 'center',
       fontWeight: 600,
@@ -166,6 +172,8 @@ export const useStyles = createStyles((theme) => ({
     color: theme.colors.primary[1],
     fontSize: '18px',
     fontWeight: 400,
+    fontFamily: theme.fontFamilyMonospace,
+    lineHeight: '200%',
     [`@media (max-width: ${theme.breakpoints.mobile})`]: {
       fontSize: '16px',
       textAlign: 'center',
@@ -195,13 +203,17 @@ export const useStyles = createStyles((theme) => ({
   },
   giftTitle: {
     fontSize: theme.fontSizes.lg,
-    color: theme.colors.primary[0],
+    color: theme.colors.primary[1],
+    fontFamily: theme.fontFamily,
+    fontWeight: 700,
     [`@media (max-width: ${theme.breakpoints.mobile})`]: {
+      color: theme.colors.primary[0],
       fontSize: '36px',
       fontWeight: 600,
     },
   },
   giftParagraph: {
+    fontFamily: theme.fontFamilyMonospace,
     color: theme.colors.primary[1],
     fontSize: theme.fontSizes.s,
     fontWeight: 400,

@@ -1,10 +1,11 @@
 import { MantineThemeOverride } from '@mantine/core';
 
 export const galeriaArtaTheme: MantineThemeOverride = {
-  // fontFamily: 'Teko',
-  // headings: {
-  //   fontFamily: 'Teko',
-  // },
+  fontFamily: 'Teko, sans-serif',
+  headings: {
+    fontFamily: 'Teko, sans-serif',
+  },
+  fontFamilyMonospace: 'Roboto',
   fontSizes: {
     xl: '120px',
     lg: '70px',

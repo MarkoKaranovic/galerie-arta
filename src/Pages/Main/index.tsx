@@ -26,14 +26,12 @@ export default function Main() {
         </Flex>
       </BackgroundImage>
       <Flex
-        justify="space-between"
         className={classes.cardWrapper}
-        direction="row"
+        gap={100}
       >
         <Flex
           direction="column"
           gap={50}
-          justify="center"
           align="center"
           className={classes.animationCard}
         >
@@ -63,7 +61,6 @@ export default function Main() {
         <Flex
           direction="column"
           gap={50}
-          justify="center"
           align="center"
           className={classes.animationCard}
           sx={(theme) => ({
@@ -108,7 +105,6 @@ export default function Main() {
         <Flex
           direction="column"
           gap={50}
-          justify="center"
           align="center"
           className={classes.animationCard}
         >
@@ -143,6 +139,10 @@ export default function Main() {
           pos="absolute"
           maw={287}
           src="/assets/brushMarker.svg"
+          style={{
+            left: '40px',
+            top: '68px',
+          }}
         />
         <Flex
           gap={86}
@@ -158,7 +158,7 @@ export default function Main() {
           </Flex>
           <Flex
             direction="column"
-            gap={100}
+            gap={50}
             pt={90}
             sx={(theme) => ({
               [`@media (max-width: ${theme.breakpoints.mobile})`]: {
@@ -181,31 +181,32 @@ export default function Main() {
               })}
             >
               <Image src="/assets/Eye.png" />
-              <Text
-                size={43}
-                color="rgba(56, 59, 105, 1)"
-                fw={500}
+              <Flex
+                direction="column"
                 sx={(theme) => ({
                   [`@media (max-width: ${theme.breakpoints.mobile})`]: {
                     display: 'none',
                   },
                 })}
               >
-                DRUŽIMO SE U ...
-              </Text>
-              <Text
-                size={30}
-                color="rgba(56, 59, 105, 1)"
-                fw={500}
-                underline
-                sx={(theme) => ({
-                  [`@media (max-width: ${theme.breakpoints.mobile})`]: {
-                    display: 'none',
-                  },
-                })}
-              >
-                Osijeku
-              </Text>
+                <Text
+                  size={43}
+                  color="rgba(56, 59, 105, 1)"
+                  fw={500}
+                >
+                  DRUŽIMO SE U ...
+                </Text>
+                <Text
+                  size={30}
+                  color="rgba(56, 59, 105, 1)"
+                  sx={(theme) => ({
+                    fontFamily: theme.fontFamilyMonospace,
+                  })}
+                  underline
+                >
+                  Osijeku
+                </Text>
+              </Flex>
             </Flex>
           </Flex>
         </Flex>
@@ -235,42 +236,11 @@ export default function Main() {
         <Flex
           gap={20}
           justify="space-between"
+          align="center"
           className={classes.servicesWrapper}
         >
           <Image
             src="/assets/Painting.svg"
-            maw={555}
-            mah={564}
-            className={classes.servicesImage}
-          />
-          <Flex
-            direction="column"
-            gap={20}
-            className={classes.servicesTextWrapper}
-          >
-            <Text
-              ff="Teko"
-              className={classes.servicesTitle}
-            >
-              NEŠTO POSEBNO I ZA MALENE
-            </Text>
-            <Text
-              ff="Roboto"
-              className={classes.servicesParagprah}
-            >
-              Naše likovne radionice su puno više od običnih umjetničkih lekcija - ovdje se vaša djeca mogu iraziti,
-              istražiti svoju kreativnost i pronaći nove prrijatelje. Naši iskusni instruktroi vodit će ih kroz sve
-              korake stvaranja, od ideje do konačnog djela.
-            </Text>
-          </Flex>
-        </Flex>
-        <Flex
-          gap={20}
-          justify="space-between"
-          className={classes.servicesWrapper}
-        >
-          <Image
-            src="/assets/cake.svg"
             maw={555}
             mah={564}
             alt="With default placeholder"
@@ -280,7 +250,29 @@ export default function Main() {
           <Flex
             direction="column"
             gap={20}
-            pt={100}
+            className={classes.servicesTextWrapper}
+          >
+            <Text className={classes.servicesTitle}> NEŠTO POSEBNO I ZA MALENE</Text>
+            <Box>
+              <Text
+                ff="Roboto"
+                className={classes.servicesParagprah}
+              >
+                Naše likovne radionice su puno više od običnih umjetničkih lekcija - ovdje se vaša djeca mogu iraziti,
+                istražiti svoju kreativnost i pronaći nove prijatelje. Naši iskusni instruktori vodit će ih kroz sve
+                korake stvaranja, od ideje do konačnog djela.
+              </Text>
+            </Box>
+          </Flex>
+        </Flex>
+        <Flex
+          gap={20}
+          justify="space-between"
+          className={classes.servicesWrapper}
+        >
+          <Flex
+            direction="column"
+            gap={20}
             className={classes.servicesTextWrapper}
           >
             <Text
@@ -324,6 +316,14 @@ export default function Main() {
               </Text>
             </Box>
           </Flex>
+          <Image
+            src="/assets/cake.svg"
+            maw={555}
+            mah={564}
+            alt="With default placeholder"
+            withPlaceholder
+            className={classes.servicesImage}
+          />
         </Flex>
 
         <Flex
@@ -339,6 +339,7 @@ export default function Main() {
           />
           <Flex
             direction="column"
+            justify="center"
             className={classes.servicesTextWrapper}
           >
             <Text className={classes.servicesTitle}>A KERAMIKA?</Text>

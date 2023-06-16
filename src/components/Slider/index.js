@@ -16,7 +16,6 @@ export default function TestimonialSlider() {
 
       <Carousel
         mx={60}
-        withIndicators
         loop
         draggable
         styles={{
@@ -27,19 +26,15 @@ export default function TestimonialSlider() {
             alignItems: 'center',
           },
           control: {
-            background: '#D9D9D9;',
             border: 'none',
+            background: 'none',
             [`@media (max-width: 576px)`]: {
-              // width: 40,
-              // height: 40,
-              // marginLeft: 40,
-              // marginRight: 40,
+              background: '#D9D9D9;',
             },
           },
           controls: {
             top: 0,
             bottom: 0,
-            // margin: 'auto',
 
             [`@media (max-width:576px)`]: {
               top: -100,
@@ -48,14 +43,6 @@ export default function TestimonialSlider() {
             [`@media (max-width: 1200px)`]: {
               top: 450,
             },
-          },
-          indicators: {
-            marginRight: 100,
-            marginLeft: 100,
-            bottom: -30,
-          },
-          indicator: {
-            width: '100%',
           },
         }}
         nextControlIcon={<Image src="/assets/RightArrow.svg" />}

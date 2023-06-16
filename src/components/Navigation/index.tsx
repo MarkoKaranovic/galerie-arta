@@ -1,4 +1,4 @@
-import { Burger, Flex } from '@mantine/core';
+import { Burger, Button, Flex } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 
 import { useNavigate } from 'react-router-dom';
@@ -6,26 +6,14 @@ import Menu from '../Menu';
 import { useStyles } from './styles';
 export default function Navigation() {
   const navigate = useNavigate();
-  const [opened, { toggle, open, close }] = useDisclosure(false);
+  const [opened, { open, close }] = useDisclosure(false);
   const { classes } = useStyles();
   return (
     <>
       <Flex
-        bg="#FFFBF5"
         justify="space-between"
-        p="30px 40px"
-        // pl="298px"
-        sx={(theme) => ({
-          [`@media (max-width: ${theme.breakpoints.mobile})`]: {
-            position: 'fixed',
-            backgroundColor: 'white',
-            // background: 'none',
-            padding: 10,
-            zIndex: 1,
-            width: '100%',
-            opacity: 0.9,
-          },
-        })}
+        align="center"
+        className={classes.navigationContainer}
       >
         <Burger
           size="md"
@@ -37,68 +25,71 @@ export default function Navigation() {
           onClick={open}
           opened={opened}
         />
-        {/* <Button
-          radius={25}
-          size="20"
+
+        <Button
           bg={'#FFFBF5'}
           variant="subtle"
           color="dark"
+          ff="Roboto"
           onClick={() => navigate('/about')}
+          className={classes.navigationItem}
         >
           O NAMA
-        </Button> */}
-        {/* <Button
-          radius={25}
-          size="20"
+        </Button>
+        <Button
           variant="subtle"
           color="dark"
+          ff="Roboto"
+          p={5}
           bg={'#FFFBF5'}
           onClick={() => navigate('/gift')}
+          className={classes.navigationItem}
         >
           POKOLN BON
-        </Button> */}
-        {/* <Button
-          radius={25}
-          size="20"
+        </Button>
+        <Button
           variant="subtle"
           color="dark"
+          ff="Roboto"
+          p={5}
           bg={'#FFFBF5'}
           onClick={() => navigate('/gallery')}
+          className={classes.navigationItem}
         >
           GALERIJA
         </Button>
         <Button
-          radius={25}
-          size="20"
           variant="subtle"
           color="dark"
+          ff="Roboto"
+          p={5}
           bg={'#FFFBF5'}
           onClick={() => navigate('/service')}
+          className={classes.navigationItem}
         >
           USLUGA
         </Button>
         <Button
-          radius={25}
-          size="20"
           variant="subtle"
           color="dark"
+          ff="Roboto"
+          p={5}
           bg={'#FFFBF5'}
           onClick={() => navigate('/contact')}
+          className={classes.navigationItem}
         >
           KONTAKT
         </Button>
-        <Button
-          radius={45}
-          size="xl"
-          bg="primary.0"
+        <button
           onClick={() => navigate('/reservation')}
+          className={classes.navigationItemReservation}
         >
           REZERVIRAJ KARTU
-        </Button> */}
+        </button>
+
         <Menu
           opened={opened}
           close={close}
-          // toggle={toggle}
         />
       </Flex>
     </>
