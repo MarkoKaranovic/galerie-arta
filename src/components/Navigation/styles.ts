@@ -3,10 +3,12 @@ import { createStyles } from '@mantine/core';
 export const useStyles = createStyles((theme) => ({
   navigationContainer: {
     position: 'absolute',
-    padding: '35px 40px',
-    width: '95%',
+    // padding: '35px 40px',
+    width: '100%',
+    height: '10%',
     backgroundColor: theme.colors.secondary[0],
     zIndex: 1,
+    opacity: 0.8,
     [`@media (max-width: ${theme.breakpoints.mobile})`]: {
       position: 'fixed',
       backgroundColor: 'white',
@@ -34,6 +36,9 @@ export const useStyles = createStyles((theme) => ({
     [`@media (max-width: ${theme.breakpoints.mobile})`]: {
       display: 'none',
     },
+    // '&:active': { opacity: 0.4 },
+    '&:hover': { backgroundColor: theme.colors.primary[0], color: 'white' },
+    '&:active': { backgroundColor: theme.colors.primary[0], color: 'white' },
   },
   navigationItemReservation: {
     fontSize: '20px',

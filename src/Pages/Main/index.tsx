@@ -360,7 +360,7 @@ export default function Main() {
             direction="column"
             className={classes.giftTextWrapper}
           >
-            <Text className={classes.giftTitle}>POKOLN BON</Text>
+            <Text className={classes.giftTitle}>POKLON BON</Text>
             <Text className={classes.giftParagraph}>
               Iznenadite svoje najmilije posebnim poklonom, odaberite neku od naših usluga i razveselite dragu osobu.
             </Text>
@@ -369,6 +369,9 @@ export default function Main() {
             src="/assets/giftCard.svg"
             maw={666}
             mah={472}
+            style={{
+              cursor: 'pointer',
+            }}
           />
         </Flex>
       </Box>

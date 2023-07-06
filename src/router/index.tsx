@@ -7,7 +7,7 @@ import Gallery from '../Pages/Gallery';
 import Gift from '../Pages/Gift';
 import Main from '../Pages/Main';
 import Reservation from '../Pages/Reservation';
-import Service from '../Pages/Service';
+import Service from '../Pages/Workshops';
 import { galeriaArtaTheme } from '../theme/theme';
 
 export const router = createBrowserRouter([
@@ -45,7 +45,7 @@ export const router = createBrowserRouter([
         element: <Reservation />,
       },
       {
-        path: 'service',
+        path: 'workshops',
         element: <Service />,
       },
     ],

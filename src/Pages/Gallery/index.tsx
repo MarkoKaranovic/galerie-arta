@@ -1,8 +1,6 @@
 import { Carousel } from '@mantine/carousel';
 import { Flex, Image, Text } from '@mantine/core';
 
-import React from 'react';
-
 export default function Gallery() {
   return (
     <Flex
@@ -52,7 +50,7 @@ export default function Gallery() {
           >
             <Image
               width="325px"
-              src="/assets/Frame 46.png"
+              src="/assets/Frame_46.png"
             />
           </Flex>
         </Carousel.Slide>
@@ -66,7 +64,7 @@ export default function Gallery() {
           >
             <Image
               width="325px"
-              src="/assets/Frame 46.png"
+              src="/assets/Frame_46.png"
             />
           </Flex>
         </Carousel.Slide>
@@ -78,7 +76,7 @@ export default function Gallery() {
           >
             <Image
               width="325px"
-              src="/assets/Frame 46.png"
+              src="/assets/Frame_46.png"
             />
           </Flex>
         </Carousel.Slide>
@@ -90,7 +88,7 @@ export default function Gallery() {
           >
             <Image
               width="325px"
-              src="/assets/Frame 46.png"
+              src="/assets/Frame_46.png"
             />
           </Flex>
         </Carousel.Slide>
@@ -102,7 +100,7 @@ export default function Gallery() {
           >
             <Image
               width="325px"
-              src="/assets/Frame 46.png"
+              src="/assets/Frame_46.png"
             />
           </Flex>
         </Carousel.Slide>
@@ -114,7 +112,7 @@ export default function Gallery() {
           >
             <Image
               width="325px"
-              src="/assets/Frame 46.png"
+              src="/assets/Frame_46.png"
             />
           </Flex>
         </Carousel.Slide>
@@ -126,7 +124,7 @@ export default function Gallery() {
           >
             <Image
               width="325px"
-              src="/assets/Frame 46.png"
+              src="/assets/Frame_46.png"
             />
           </Flex>
         </Carousel.Slide>
@@ -138,7 +136,7 @@ export default function Gallery() {
           >
             <Image
               width="325px"
-              src="/assets/Frame 46.png"
+              src="/assets/Frame_46.png"
             />
           </Flex>
         </Carousel.Slide>
@@ -150,7 +148,7 @@ export default function Gallery() {
           >
             <Image
               width="325px"
-              src="/assets/Frame 46.png"
+              src="/assets/Frame_46.png"
             />
           </Flex>
         </Carousel.Slide>
@@ -162,7 +160,7 @@ export default function Gallery() {
           >
             <Image
               width="325px"
-              src="/assets/Frame 46.png"
+              src="/assets/Frame_46.png"
             />
           </Flex>
         </Carousel.Slide>
@@ -174,7 +172,7 @@ export default function Gallery() {
           >
             <Image
               width="325px"
-              src="/assets/Frame 46.png"
+              src="/assets/Frame_46.png"
             />
           </Flex>
         </Carousel.Slide>
@@ -186,7 +184,7 @@ export default function Gallery() {
           >
             <Image
               width="325px"
-              src="/assets/Frame 46.png"
+              src="/assets/Frame_46.png"
             />
           </Flex>
         </Carousel.Slide>

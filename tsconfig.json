@@ -6,9 +6,23 @@
     "module": "esnext",
     "outDir": "./dist",
     "moduleResolution": "Node",
-    "paths": {
-      "@galeria-arta/*": ["./src/*"]
-    }
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true
   },
-  "include": ["src", "test", "typings/**/*.d.ts"]
+  "include": [
+    "src",
+    "test",
+    "typings/**/*.d.ts"
+  ]
 }

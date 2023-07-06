@@ -1,4 +1,4 @@
-import { Burger, Button, Flex } from '@mantine/core';
+import { Burger, Button, Flex, Image } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 
 import { useNavigate } from 'react-router-dom';
@@ -11,7 +11,7 @@ export default function Navigation() {
   return (
     <>
       <Flex
-        justify="space-between"
+        justify="space-around"
         align="center"
         className={classes.navigationContainer}
       >
@@ -25,7 +25,12 @@ export default function Navigation() {
           onClick={open}
           opened={opened}
         />
-
+        <Image
+          src="/assets/logo-white.svg"
+          width={200}
+          height={150}
+          pt={75}
+        />
         <Button
           bg={'#FFFBF5'}
           variant="subtle"
@@ -36,17 +41,7 @@ export default function Navigation() {
         >
           O NAMA
         </Button>
-        <Button
-          variant="subtle"
-          color="dark"
-          ff="Roboto"
-          p={5}
-          bg={'#FFFBF5'}
-          onClick={() => navigate('/gift')}
-          className={classes.navigationItem}
-        >
-          POKOLN BON
-        </Button>
+
         <Button
           variant="subtle"
           color="dark"
@@ -64,10 +59,10 @@ export default function Navigation() {
           ff="Roboto"
           p={5}
           bg={'#FFFBF5'}
-          onClick={() => navigate('/service')}
+          onClick={() => navigate('/workshops')}
           className={classes.navigationItem}
         >
-          USLUGA
+          RADIONICE
         </Button>
         <Button
           variant="subtle"

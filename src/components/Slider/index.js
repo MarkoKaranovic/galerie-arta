@@ -1,8 +1,6 @@
 import { Carousel } from '@mantine/carousel';
 import { Box, Image } from '@mantine/core';
 
-import React from 'react';
-
 import CarouselCard from '../Cards';
 
 import { useStyles } from './styles';
@@ -53,7 +51,7 @@ export default function TestimonialSlider() {
             title="ANDRE NICOLLIER, 37"
             job="Pharmaceutical sales rep"
             review="Great app for networking! "
-            image="/assets/Frame 46.png"
+            image="/assets/Frame_46.png"
           />
         </Carousel.Slide>
         <Carousel.Slide>
@@ -61,7 +59,7 @@ export default function TestimonialSlider() {
             title="Melanie Cho, 39"
             job="Artist"
             review="An app with some of the best coaches in Zurich. "
-            image="/assets/Frame 46.png"
+            image="/assets/Frame_46.png"
           />
         </Carousel.Slide>
         <Carousel.Slide>
@@ -69,7 +67,7 @@ export default function TestimonialSlider() {
             title="Patrick Graf, 57"
             job="Reinsurance Rep"
             review="They throw the best networking parties in Zurich"
-            image="/assets/Frame 46.png"
+            image="/assets/Frame_46.png"
           />
         </Carousel.Slide>
         <Carousel.Slide>
@@ -77,14 +75,14 @@ export default function TestimonialSlider() {
             title="Marina Sobitan, 30"
             job="Fashion Sales"
             review="I love the coaching aspect of the App!"
-            image="/assets/Frame 46.png"
+            image="/assets/Frame_46.png"
           />
         </Carousel.Slide>
         <Carousel.Slide>
           <CarouselCard
             title="Barblin Focke, 41"
             review="Finally a dating app for people over 30! "
-            image="/assets/Frame 46.png"
+            image="/assets/Frame_46.png"
           />
         </Carousel.Slide>
       </Carousel>

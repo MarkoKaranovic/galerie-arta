@@ -1,7 +1,7 @@
-import { Badge, Button, Card, Group, Image, Text } from '@mantine/core';
-import React from 'react';
-
+import { Badge, Card, Flex, Group, Image, Text } from '@mantine/core';
+import { useStyles } from './styles';
 export default function EventCard() {
+  const { classes } = useStyles();
   return (
     <Card
       shadow="sm"
@@ -37,24 +37,63 @@ export default function EventCard() {
           25$
         </Badge>
       </Group>
-
-      <Text
-        size="sm"
-        color="dimmed"
+      <Flex
+        gap={10}
+        direction="column"
       >
-        With Fjord Tours you can explore more of the magical fjord landscapes with tours and activities on and around
-        the fjords of Norway
-      </Text>
+        <Text
+          size="sm"
+          color="dimmed"
+        >
+          Mrtva Priroda
+        </Text>
+        <Text
+          size="sm"
+          color="dimmed"
+        >
+          Gunduliceva 32
+        </Text>
+        <Text
+          size="sm"
+          color="dimmed"
+        >
+          Vrijeme : 18:00 - 20:00
+        </Text>
 
-      <Button
-        variant="light"
-        color="blue"
-        fullWidth
-        mt="md"
-        radius="md"
-      >
-        Book classic tour now
-      </Button>
+        <Flex>
+          <Image
+            src="/assets/ph_paint-brush-fill.svg"
+            alt="Norway"
+            maw={26}
+            mah={23}
+          />
+          <Image
+            src="/assets/ph_paint-brush-fill.svg"
+            alt="Norway"
+            maw={26}
+            mah={23}
+          />
+          <Image
+            src="/assets/Shadow_brush.svg"
+            alt="Norway"
+            maw={26}
+            mah={23}
+          />
+          <Image
+            src="/assets/Shadow_brush.svg"
+            alt="Norway"
+            maw={26}
+            mah={23}
+          />
+          <Image
+            src="/assets/Shadow_brush.svg"
+            alt="Norway"
+            maw={26}
+            mah={23}
+          />
+        </Flex>
+        <button className={classes.buyBtn}>KUPI ODMAH</button>
+      </Flex>
     </Card>
   );
 }

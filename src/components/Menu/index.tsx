@@ -2,11 +2,11 @@ import { Anchor, Flex, Image, Modal, Text } from '@mantine/core';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-export default function Menu({ opened, close }) {
+export default function Menu({ opened, close }: any) {
   const navigate = useNavigate();
 
   const handleClick = React.useCallback(
-    (path) => {
+    (path: any) => {
       navigate(path);
       close();
     },
