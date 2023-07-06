@@ -35,7 +35,9 @@ export const useStyles = createStyles((theme) => ({
     fontFamily: theme.fontFamilyMonospace,
     fontWeight: 700,
     [`@media (max-width: ${theme.breakpoints.mobile})`]: {
-      display: 'none',
+      // display: 'none',
+      fontSize: '14px',
+      padding: '12px 30px',
     },
   },
 }));

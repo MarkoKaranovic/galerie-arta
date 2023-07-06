@@ -12,7 +12,7 @@ export default function Gallery() {
       gap={20}
       sx={(theme) => ({
         [`@media (max-width: ${theme.breakpoints.mobile})`]: {
-          padding: '0px 24px',
+          padding: '100px 20px 24px 24px',
         },
       })}
     >

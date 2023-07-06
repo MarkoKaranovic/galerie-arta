@@ -53,6 +53,14 @@ export default function Menu({ opened, close }: any) {
                   color="white"
                   size={20}
                   fw={500}
+                  onClick={() => handleClick('/')}
+                >
+                  POČETNA
+                </Anchor>
+                <Anchor
+                  color="white"
+                  size={20}
+                  fw={500}
                   onClick={() => handleClick('about')}
                 >
                   O NAMA
@@ -61,10 +69,15 @@ export default function Menu({ opened, close }: any) {
                   color="white"
                   size={20}
                   fw={500}
-                  onClick={() => handleClick('reservation')}
+                  onClick={() => handleClick('workshops')}
                 >
                   REZERVIRAJ
                 </Anchor>
+              </Flex>
+              <Flex
+                direction="column"
+                gap={20}
+              >
                 <Anchor
                   color="white"
                   size={20}
@@ -73,11 +86,6 @@ export default function Menu({ opened, close }: any) {
                 >
                   RADIONICE
                 </Anchor>
-              </Flex>
-              <Flex
-                direction="column"
-                gap={20}
-              >
                 <Anchor
                   color="white"
                   size={20}

@@ -15,6 +15,13 @@ export default function EventCard() {
         alt="Norway"
         maw={285}
         mah={180}
+        sx={(theme) => ({
+          [`@media (min-width: ${theme.breakpoints.mobile})`]: {
+            img: {
+              height: '100px',
+            },
+          },
+        })}
       />
 
       <Group
