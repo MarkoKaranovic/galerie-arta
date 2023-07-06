@@ -1,53 +1,17 @@
-import { Container, Modal } from '@mantine/core';
-import { useDisclosure } from '@mantine/hooks';
+import { BackgroundImage, Container, Flex, Image, Text } from '@mantine/core';
 
-import { Elements } from '@stripe/react-stripe-js';
-import { loadStripe } from '@stripe/stripe-js';
-import React from 'react';
-import CheckoutForm from '../../components/Checkout/CheckoutForm';
 import { useStyles } from './styles';
 
-const stripePromise = loadStripe(
-  'pk_test_51N1TeEKR78E7bO3JS8a2pJbSFK4aYrG5SN956FlFwsnhlrXTLziTeUMlmwUl3D33PjPctRfX4zGuP5UqwRNwvRtb00YwUpTBDk',
-);
-
 export default function About() {
-  const [opened, { open, close }] = useDisclosure(true);
   const { classes } = useStyles();
-  const [clientSecret, setClientSecret] = React.useState('');
 
-  React.useEffect(() => {
-    // Create PaymentIntent as soon as the page loads
-    fetch('/create-payment-intent', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ items: [{ id: 'xl-tshirt' }] }),
-    })
-      .then((res) => res.json())
-      .then((data) => setClientSecret(data.clientSecret));
-  }, []);
-  const appearance = {
-    theme: 'stripe',
-  };
-  const options: any = {
-    clientSecret,
-    appearance,
-  };
   return (
     <Container
       size="100%"
       p={0}
       bg="#FFFBF5"
     >
-      {/* {clientSecret && (
-        <Elements
-          options={options}
-          stripe={stripePromise}
-        >
-          <CheckoutForm />
-        </Elements>
-      )} */}
-      {/* <BackgroundImage
+      <BackgroundImage
         className={classes.bgImage}
         src="/assets/about.png"
         mah={700}
@@ -80,9 +44,9 @@ export default function About() {
           fw={400}
           color="primary.0"
         >
-          Dajemo vam uvid u djelić atmosfere našeg <br /> kreativnog studija. Prepustite se vodstvu naših kreativnih
-          instruktora i ne brinite ako vam umjetnost <br /> nije jača strana. Stvorit ćete pravo malo remek djelo na
-          koje ćete biti ponosni. Neka zabava počne!
+          Dajemo vam uvid u djelić atmosfere našeg kreativnog studija. Prepustite se vodstvu naših kreativnih
+          instruktora i ne brinite ako vam umjetnost nije jača strana. Stvorit ćete pravo malo remek djelo na koje ćete
+          biti ponosni. Neka zabava počne!
         </Text>
         <Image
           src="/assets/glass-wine.png"
@@ -108,33 +72,33 @@ export default function About() {
         >
           UPOZNAJTE NAS
         </Text>
-        <Flex gap={20}>
+        <Flex
+          gap={20}
+          justify="center"
+          align="center"
+        >
           <Image
             src="/assets/Kristina.png"
-            maw={555}
-            mah={348}
-            w={555}
+            maw={440}
+            mah={568}
           />
           <Text
             size={24}
             fw={400}
             color="primary.0"
           >
-            Upoznajte Kristinu Janković, mag.educ.art. <br /> <br /> Bogato likovno znanje stekla je pohađajući Školu
-            primijenjene <br /> umjetnosti i dizajna Osijek, a 2014. upisala je Akademiju za
-            <br /> umjetnost i kulturu u Osijeku. Kristinino primarno područje <br /> interesa je upravo slikarstvo, a
-            njezin uspjeh potvrđuju <br /> sudjelovanja na brojnim slikarskim izložbama poput pet <br /> Završnih
-            izložbi studenata Odsjeka za likovnu umjetnost, samostalne izložbe u Gradskoj i sveučilišnoj knjižnici
-            Osijek, <br /> grupne izložbe vezane uz projekt Osječke ljetne noći te izložbi Plati i nosi u Galeriji Bačva
-            Meštrovićevom paviljonu u Zagrebu. Osim bogatog slikarskog iskustva,
-            <br />
-            <br />
-            Kristinu krasi i vještina rada s djecom koju je stekla kroz vođenje brojnih školskih sati likovne kulture.
+            Upoznajte Kristinu Janković, mag.educ.art. Bogato likovno znanje stekla je pohađajući Školu primijenjene
+            umjetnosti i dizajna Osijek, a 2014. upisala je Akademiju za umjetnost i kulturu u Osijeku. Kristinino
+            primarno područje interesa je upravo slikarstvo, a njezin uspjeh potvrđuju sudjelovanja na brojnim
+            slikarskim izložbama poput pet Završnih izložbi studenata Odsjeka za likovnu umjetnost, samostalne izložbe u
+            Gradskoj i sveučilišnoj knjižnici Osijek, grupne izložbe vezane uz projekt Osječke ljetne noći te izložbi
+            Plati i nosi u Galeriji Bačva Meštrovićevom paviljonu u Zagrebu. Osim bogatog slikarskog iskustva, Kristinu
+            krasi i vještina rada s djecom koju je stekla kroz vođenje brojnih školskih sati likovne kulture.
           </Text>
         </Flex>
-      </Flex> */}
+      </Flex>
 
-      <Modal
+      {/* <Modal
         opened={opened}
         onClose={close}
         title="Authentication"
@@ -148,7 +112,7 @@ export default function About() {
             <CheckoutForm />
           </Elements>
         )}
-      </Modal>
+      </Modal> */}
     </Container>
   );
 }

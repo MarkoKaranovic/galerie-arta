@@ -1,4 +1,5 @@
-import { Box, Flex, Text } from '@mantine/core';
+import { Box, Flex, Grid, Text } from '@mantine/core';
+import { IconBrandFacebook, IconBrandInstagram } from '@tabler/icons-react';
 
 export default function Footer() {
   return (
@@ -90,9 +91,7 @@ export default function Footer() {
         ></iframe>
       </Flex>
 
-      <Flex
-        justify="flex-start"
-        gap={50}
+      <Grid
         pt={50}
         sx={(theme) => ({
           [`@media (max-width: ${theme.breakpoints.mobile})`]: {
@@ -101,30 +100,40 @@ export default function Footer() {
           },
         })}
       >
-        {/* <Flex justify="space-between">
-          <Text
-            color="white"
-            size={18}
-            fw={600}
-          >
-            © 2023 GALERIA.ARTA
-          </Text>
-          <Text
-            color="white"
-            size={18}
-            fw={600}
-          >
-            OPĆI UVJETI
-          </Text>
-        </Flex>
-        <Text
-          color="white"
-          size={18}
-          fw={600}
-        >
-          PRAVILA PRIVATNOSTI OSOBNIH PODATAKA
-        </Text> */}
-      </Flex>
+        <Grid.Col span={3}>
+          <Flex>
+            <IconBrandInstagram color="white" />
+
+            <IconBrandFacebook color="white" />
+          </Flex>
+        </Grid.Col>
+        <Grid.Col span={5}>
+          <Flex justify="space-around">
+            <Text
+              color="white"
+              size={18}
+              fw={600}
+            >
+              © 2023 GALERIA.ARTA
+            </Text>
+            <Text
+              color="white"
+              size={18}
+              fw={600}
+            >
+              OPĆI UVJETI
+            </Text>
+
+            <Text
+              color="white"
+              size={18}
+              fw={600}
+            >
+              PRAVILA PRIVATNOSTI OSOBNIH PODATAKA
+            </Text>
+          </Flex>
+        </Grid.Col>
+      </Grid>
     </Box>
   );
 }

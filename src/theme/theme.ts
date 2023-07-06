@@ -26,7 +26,7 @@ export const galeriaArtaTheme: MantineThemeOverride = {
     md: '360px',
     lg: '720px',
     xl: '1440px',
-    mobile: '393px',
+    mobile: '450px',
     tablet: '720px',
     desktop: '1440px',
   },

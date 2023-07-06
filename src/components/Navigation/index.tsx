@@ -30,6 +30,7 @@ export default function Navigation() {
           width={200}
           height={150}
           pt={75}
+          onClick={() => navigate('/')}
         />
         <Button
           bg={'#FFFBF5'}
