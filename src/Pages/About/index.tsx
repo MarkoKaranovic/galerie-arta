@@ -13,7 +13,7 @@ export default function About() {
     >
       <BackgroundImage
         className={classes.bgImage}
-        src="/assets/about.png"
+        src="/assets/Rectangle_27.svg"
         mah={700}
       >
         <Flex
