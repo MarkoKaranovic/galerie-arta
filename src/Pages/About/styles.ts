@@ -6,12 +6,11 @@ export const useStyles = createStyles((theme) => ({
     height: '100vh',
 
     position: 'relative',
-  },
 
-  burger: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    borderRadius: '30px',
+    [`@media (max-width: ${theme.breakpoints.mobile})`]: {
+      display: 'block',
+      padding: '90px 0px 0px 0px',
+      maxHeight: '200px',
+    },
   },
 }));

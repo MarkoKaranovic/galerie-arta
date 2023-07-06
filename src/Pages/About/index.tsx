@@ -82,7 +82,7 @@ export default function About() {
           src="/assets/Rectangle_18.svg"
           maw={555}
           // mah={348}
-          w={158}
+          width={158}
           height={497}
           mt={20}
           sx={(theme) => ({
