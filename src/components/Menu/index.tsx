@@ -26,7 +26,7 @@ export default function Menu({ opened, close }: any) {
       <Modal.Overlay />
       <Modal.Content
         bg="#084453"
-        h="25%"
+        h="100%"
       >
         <Modal.Header bg="#084453">
           <Image
