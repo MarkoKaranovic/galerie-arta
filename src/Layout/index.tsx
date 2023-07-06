@@ -2,6 +2,7 @@ import { Box, Container } from '@mantine/core';
 import { Outlet } from 'react-router-dom';
 
 import Footer from '../components/Footer';
+import Navigation from '../components/Navigation';
 
 export default function Layout() {
   return (
@@ -12,7 +13,7 @@ export default function Layout() {
       style={{ overflow: 'hidden' }}
       p={0}
     >
-      {/* <Navigation /> */}
+      <Navigation />
       <Box>
         <Outlet />
       </Box>

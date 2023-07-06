@@ -26,6 +26,11 @@ export default function About() {
             color="white"
             size="120px"
             fw={700}
+            sx={(theme) => ({
+              [`@media (max-width: ${theme.breakpoints.mobile})`]: {
+                fontSize: '36px',
+              },
+            })}
           >
             O NAMA
           </Text>
@@ -38,22 +43,53 @@ export default function About() {
         pb={170}
         gap={20}
         align="center"
+        sx={(theme) => ({
+          [`@media (max-width: ${theme.breakpoints.mobile})`]: {
+            fontSize: '36px',
+            padding: '30px 24px',
+          },
+        })}
       >
         <Text
           size={24}
           fw={400}
           color="primary.0"
+          sx={(theme) => ({
+            [`@media (max-width: ${theme.breakpoints.mobile})`]: {
+              fontSize: '14px',
+            },
+          })}
         >
-          Dajemo vam uvid u djelić atmosfere našeg kreativnog studija. Prepustite se vodstvu naših kreativnih
-          instruktora i ne brinite ako vam umjetnost nije jača strana. Stvorit ćete pravo malo remek djelo na koje ćete
-          biti ponosni. Neka zabava počne!
+          Osnovana 2023., Galeria Arta predstavlja malu oazu umjetničkog stvaralašta. Presvećena stvaranju opuštenog i
+          intimnog iskustva, Galeria Arta svojim polaznicima otvara vrata u svijet umjetnosti. Uz vodstvo stručnih
+          voditelja, polaznici imaju priliku iskušati vlastite kreativne vještine kroz zabavne radionice, dok oni više
+          naklonjeni umjetnosti imaju moćnost stjecanja znanja i unaprjeđivanje vlastitih kreativnih dometa kroz ponudu
+          individulanih tečajeva i škole slikanja.
         </Text>
         <Image
           src="/assets/glass-wine.png"
           maw={555}
           mah={348}
-          w={555}
+          // w={555}
           mt={20}
+          sx={(theme) => ({
+            [`@media (max-width: ${theme.breakpoints.mobile})`]: {
+              display: 'none',
+            },
+          })}
+        />
+        <Image
+          src="/assets/Rectangle_18.svg"
+          maw={555}
+          // mah={348}
+          w={158}
+          height={497}
+          mt={20}
+          sx={(theme) => ({
+            [`@media (min-width: ${theme.breakpoints.mobile})`]: {
+              display: 'none',
+            },
+          })}
         />
       </Flex>
       <Flex
@@ -64,11 +100,24 @@ export default function About() {
         pb={122}
         justify="center"
         align="center"
+        sx={(theme) => ({
+          [`@media (max-width: ${theme.breakpoints.mobile})`]: {
+            display: 'block',
+
+            padding: '30px 24px',
+          },
+        })}
       >
         <Text
           size={70}
           fw={800}
           color="primary.0"
+          sx={(theme) => ({
+            [`@media (max-width: ${theme.breakpoints.mobile})`]: {
+              textAlign: 'center',
+              fontSize: '36px',
+            },
+          })}
         >
           UPOZNAJTE NAS
         </Text>
@@ -76,6 +125,11 @@ export default function About() {
           gap={20}
           justify="center"
           align="center"
+          sx={(theme) => ({
+            [`@media (max-width: ${theme.breakpoints.mobile})`]: {
+              display: 'block',
+            },
+          })}
         >
           <Image
             src="/assets/Kristina.png"
@@ -86,6 +140,12 @@ export default function About() {
             size={24}
             fw={400}
             color="primary.0"
+            sx={(theme) => ({
+              [`@media (max-width: ${theme.breakpoints.mobile})`]: {
+                paddingTop: '20px',
+                fontSize: '16px',
+              },
+            })}
           >
             Upoznajte Kristinu Janković, mag.educ.art. Bogato likovno znanje stekla je pohađajući Školu primijenjene
             umjetnosti i dizajna Osijek, a 2014. upisala je Akademiju za umjetnost i kulturu u Osijeku. Kristinino

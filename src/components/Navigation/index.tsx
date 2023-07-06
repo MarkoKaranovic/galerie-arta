@@ -26,11 +26,15 @@ export default function Navigation() {
           opened={opened}
         />
         <Image
-          src="/assets/logo-white.svg"
-          width={200}
-          height={150}
-          pt={75}
+          src="/assets/logo-white-cropped.svg"
+          width="150px"
+          p={10}
           onClick={() => navigate('/')}
+          sx={(theme) => ({
+            [`@media (max-width: ${theme.breakpoints.mobile})`]: {
+              display: 'none',
+            },
+          })}
         />
         <Button
           bg={'#FFFBF5'}

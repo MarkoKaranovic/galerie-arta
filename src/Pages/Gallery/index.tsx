@@ -1,5 +1,5 @@
-import { Carousel } from '@mantine/carousel';
-import { Flex, Image, Text } from '@mantine/core';
+import { Flex, Text } from '@mantine/core';
+import TestimonialSlider from '../../components/Slider';
 
 export default function Gallery() {
   return (
@@ -10,11 +10,21 @@ export default function Gallery() {
       pt={80}
       pb={40}
       gap={20}
+      sx={(theme) => ({
+        [`@media (max-width: ${theme.breakpoints.mobile})`]: {
+          padding: '0px 24px',
+        },
+      })}
     >
       <Text
         size={70}
         fw={700}
         color="rgba(8, 68, 83, 1)"
+        sx={(theme) => ({
+          [`@media (max-width: ${theme.breakpoints.mobile})`]: {
+            fontSize: '36px',
+          },
+        })}
       >
         GALERIJA
       </Text>
@@ -22,6 +32,11 @@ export default function Gallery() {
         size={24}
         fw={700}
         color="rgba(8, 68, 83, 1)"
+        sx={(theme) => ({
+          [`@media (max-width: ${theme.breakpoints.mobile})`]: {
+            fontSize: '20px',
+          },
+        })}
       >
         OBOJAJ SVOJE SRCE
       </Text>
@@ -29,166 +44,18 @@ export default function Gallery() {
         size={18}
         fw={700}
         color="rgba(8, 68, 83, 1)"
+        sx={(theme) => ({
+          [`@media (max-width: ${theme.breakpoints.mobile})`]: {
+            fontSize: '14px',
+            color: '#000',
+          },
+        })}
       >
-        Bili smo tamo, slikali zalaske sunca i krajolike. I htjeli <br /> smo promijeniti stvari. Zato biramo teme za
-        slikanje <br /> koje su u trendu, neuobičajene i uvijek vrijedne odmah. <br /> Pogledajte neke od naših
-        omiljenih radova ili usudimo <br /> se reći... remek-djela?
+        Dajemo vam uvid u dijelić atmosfere našeg kreativnog studija. Prepustite se vodstvu naših kreativnih instruktora
+        i ne brinite ako vam umjetnost nije jača strana. Stvorit ćete pravo malo remek djelo na koje ćete biti ponosni.
+        Neka zabava počne!
       </Text>
-      <Carousel
-        slideSize="10.333333%"
-        draggable
-        dragFree
-        loop
-        align="start"
-        // slidesToScroll={1}
-      >
-        <Carousel.Slide>
-          <Flex
-            direction="column"
-            justify="center"
-            align="center"
-          >
-            <Image
-              width="325px"
-              src="/assets/Frame_46.png"
-            />
-          </Flex>
-        </Carousel.Slide>
-
-        <Carousel.Slide>
-          {' '}
-          <Flex
-            direction="column"
-            justify="center"
-            align="center"
-          >
-            <Image
-              width="325px"
-              src="/assets/Frame_46.png"
-            />
-          </Flex>
-        </Carousel.Slide>
-        <Carousel.Slide>
-          <Flex
-            direction="column"
-            justify="center"
-            align="center"
-          >
-            <Image
-              width="325px"
-              src="/assets/Frame_46.png"
-            />
-          </Flex>
-        </Carousel.Slide>
-        <Carousel.Slide>
-          <Flex
-            direction="column"
-            justify="center"
-            align="center"
-          >
-            <Image
-              width="325px"
-              src="/assets/Frame_46.png"
-            />
-          </Flex>
-        </Carousel.Slide>
-        <Carousel.Slide>
-          <Flex
-            direction="column"
-            justify="center"
-            align="center"
-          >
-            <Image
-              width="325px"
-              src="/assets/Frame_46.png"
-            />
-          </Flex>
-        </Carousel.Slide>
-        <Carousel.Slide>
-          <Flex
-            direction="column"
-            justify="center"
-            align="center"
-          >
-            <Image
-              width="325px"
-              src="/assets/Frame_46.png"
-            />
-          </Flex>
-        </Carousel.Slide>
-        <Carousel.Slide>
-          <Flex
-            direction="column"
-            justify="center"
-            align="center"
-          >
-            <Image
-              width="325px"
-              src="/assets/Frame_46.png"
-            />
-          </Flex>
-        </Carousel.Slide>
-        <Carousel.Slide>
-          <Flex
-            direction="column"
-            justify="center"
-            align="center"
-          >
-            <Image
-              width="325px"
-              src="/assets/Frame_46.png"
-            />
-          </Flex>
-        </Carousel.Slide>
-        <Carousel.Slide>
-          <Flex
-            direction="column"
-            justify="center"
-            align="center"
-          >
-            <Image
-              width="325px"
-              src="/assets/Frame_46.png"
-            />
-          </Flex>
-        </Carousel.Slide>
-        <Carousel.Slide>
-          <Flex
-            direction="column"
-            justify="center"
-            align="center"
-          >
-            <Image
-              width="325px"
-              src="/assets/Frame_46.png"
-            />
-          </Flex>
-        </Carousel.Slide>
-        <Carousel.Slide>
-          <Flex
-            direction="column"
-            justify="center"
-            align="center"
-          >
-            <Image
-              width="325px"
-              src="/assets/Frame_46.png"
-            />
-          </Flex>
-        </Carousel.Slide>
-        <Carousel.Slide>
-          <Flex
-            direction="column"
-            justify="center"
-            align="center"
-          >
-            <Image
-              width="325px"
-              src="/assets/Frame_46.png"
-            />
-          </Flex>
-        </Carousel.Slide>
-      </Carousel>
+      <TestimonialSlider />
     </Flex>
   );
 }

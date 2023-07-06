@@ -2,20 +2,19 @@ import { createStyles } from '@mantine/core';
 
 export const useStyles = createStyles((theme) => ({
   navigationContainer: {
-    position: 'absolute',
-    // padding: '35px 40px',
+    // position: 'absolute',
+    padding: '35px 40px',
     width: '100%',
     height: '10%',
     backgroundColor: theme.colors.secondary[0],
     zIndex: 1,
-    opacity: 0.8,
+
     [`@media (max-width: ${theme.breakpoints.mobile})`]: {
       position: 'fixed',
-      backgroundColor: 'white',
-      padding: 10,
+      padding: 0,
       zIndex: 1,
-      width: '100%',
-      opacity: 0.9,
+      width: '30%',
+      background: 'none',
     },
   },
   burger: {

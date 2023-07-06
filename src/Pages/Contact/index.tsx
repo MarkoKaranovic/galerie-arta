@@ -7,6 +7,13 @@ export default function Contact() {
       p="60px 155px"
       gap={120}
       // justify="space-between"
+      direction="row"
+      sx={(theme) => ({
+        [`@media (max-width: ${theme.breakpoints.mobile})`]: {
+          padding: '0 24px',
+          display: 'block',
+        },
+      })}
     >
       <Box pt={45}>
         <Text
@@ -14,69 +21,202 @@ export default function Contact() {
           size="sm"
           fw={700}
           mb={30}
+          sx={(theme) => ({
+            [`@media (max-width: ${theme.breakpoints.mobile})`]: {
+              textAlign: 'center',
+            },
+          })}
         >
           KONTAKTIRAJTE NAS
         </Text>
-        <Divider my="sm" />
+        <Divider
+          my="sm"
+          sx={(theme) => ({
+            [`@media (max-width: ${theme.breakpoints.mobile})`]: {
+              display: 'none',
+            },
+          })}
+        />
         <Flex
           direction="column"
           gap={40}
           mt={50}
+          sx={(theme) => ({
+            [`@media (max-width: ${theme.breakpoints.mobile})`]: {
+              gap: '20px',
+            },
+          })}
         >
           <Flex
             gap={10}
             justify="space-between"
+            sx={(theme) => ({
+              [`@media (max-width: ${theme.breakpoints.mobile})`]: {
+                display: 'grid',
+                gridTemplateColumns: '1fr',
+                gap: '20px',
+              },
+            })}
           >
             <TextInput
-              placeholder="Tvoje ime"
               label="Ime"
+              placeholder="Ime"
               size="sm"
               variant="filled"
               labelProps={{ style: { color: 'primary.0' } }}
               color="primary.0"
+              sx={(theme) => ({
+                label: { color: theme.colors.primary[0] },
+                [`@media (max-width: ${theme.breakpoints.mobile})`]: {
+                  label: { display: 'none', color: theme.colors.primary[0] },
+                  input: {
+                    backgroundColor: '#EFEFEF',
+                    '::placeholder': { color: theme.colors.primary[0], fontSize: '16px', fontWeight: 400 },
+                    ':-ms-input-placeholder': { color: theme.colors.primary[0], fontSize: '16px', fontWeight: 400 },
+                    '::-ms-input-placeholder': { color: theme.colors.primary[0], fontSize: '16px', fontWeight: 400 },
+                  },
+                },
+                [`@media (min-width: ${theme.breakpoints.mobile})`]: {
+                  input: {
+                    '::placeholder': { color: '#EFEFEF' },
+                    ':-ms-input-placeholder': { color: '#EFEFEF' },
+                    '::-ms-input-placeholder': { color: '#EFEFEF' },
+                  },
+                },
+              })}
             />
             <TextInput
-              placeholder="Tvoje prezime"
               label="Prezime"
               size="sm"
+              placeholder="Prezime"
               variant="filled"
               labelProps={{ style: { color: 'primary.0' } }}
+              sx={(theme) => ({
+                label: { color: theme.colors.primary[0] },
+                [`@media (max-width: ${theme.breakpoints.mobile})`]: {
+                  label: { display: 'none' },
+                  input: {
+                    backgroundColor: '#EFEFEF',
+                    '::placeholder': { color: theme.colors.primary[0], fontSize: '16px', fontWeight: 400 },
+                    ':-ms-input-placeholder': { color: theme.colors.primary[0], fontSize: '16px', fontWeight: 400 },
+                    '::-ms-input-placeholder': { color: theme.colors.primary[0], fontSize: '16px', fontWeight: 400 },
+                  },
+                },
+                [`@media (min-width: ${theme.breakpoints.mobile})`]: {
+                  input: {
+                    '::placeholder': { color: '#EFEFEF' },
+                    ':-ms-input-placeholder': { color: '#EFEFEF' },
+                    '::-ms-input-placeholder': { color: '#EFEFEF' },
+                  },
+                },
+              })}
             />
           </Flex>
           <Flex
             gap={10}
             justify="space-between"
+            sx={(theme) => ({
+              [`@media (max-width: ${theme.breakpoints.mobile})`]: {
+                display: 'grid',
+                gridTemplateColumns: '1fr',
+                gap: '20px',
+              },
+            })}
           >
             <TextInput
-              placeholder="Email"
               label="Email"
+              placeholder="Email"
               size="sm"
               variant="filled"
               labelProps={{ style: { color: 'primary.0' } }}
               color="primary.0"
+              sx={(theme) => ({
+                label: { color: theme.colors.primary[0] },
+                [`@media (max-width: ${theme.breakpoints.mobile})`]: {
+                  label: { display: 'none' },
+                  input: {
+                    backgroundColor: '#EFEFEF',
+                    '::placeholder': { color: theme.colors.primary[0], fontSize: '16px', fontWeight: 400 },
+                    ':-ms-input-placeholder': { color: theme.colors.primary[0], fontSize: '16px', fontWeight: 400 },
+                    '::-ms-input-placeholder': { color: theme.colors.primary[0], fontSize: '16px', fontWeight: 400 },
+                  },
+                },
+                [`@media (min-width: ${theme.breakpoints.mobile})`]: {
+                  input: {
+                    '::placeholder': { color: '#EFEFEF' },
+                    ':-ms-input-placeholder': { color: '#EFEFEF' },
+                    '::-ms-input-placeholder': { color: '#EFEFEF' },
+                  },
+                },
+              })}
             />
             <TextInput
-              placeholder="Telefon"
               label="Telefon"
+              placeholder="Telefon"
               size="sm"
               variant="filled"
               labelProps={{ style: { color: 'primary.0' } }}
+              sx={(theme) => ({
+                label: { color: theme.colors.primary[0] },
+                [`@media (max-width: ${theme.breakpoints.mobile})`]: {
+                  label: { display: 'none' },
+                  input: {
+                    backgroundColor: '#EFEFEF',
+                    '::placeholder': { color: theme.colors.primary[0], fontSize: '16px', fontWeight: 400 },
+                    ':-ms-input-placeholder': { color: theme.colors.primary[0], fontSize: '16px', fontWeight: 400 },
+                    '::-ms-input-placeholder': { color: theme.colors.primary[0], fontSize: '16px', fontWeight: 400 },
+                  },
+                },
+                [`@media (min-width: ${theme.breakpoints.mobile})`]: {
+                  input: {
+                    '::placeholder': { color: '#EFEFEF' },
+                    ':-ms-input-placeholder': { color: '#EFEFEF' },
+                    '::-ms-input-placeholder': { color: '#EFEFEF' },
+                  },
+                },
+              })}
             />
           </Flex>
           <Textarea
-            placeholder="Napiši nešto..."
+            placeholder="Poruka..."
             label="Poruka"
             size="sm"
             variant="filled"
             labelProps={{ style: { color: 'primary.0' } }}
+            sx={(theme) => ({
+              label: { color: theme.colors.primary[0] },
+              [`@media (min-width: ${theme.breakpoints.mobile})`]: {
+                textArea: {
+                  '::placeholder': { color: '#EFEFEF' },
+                  ':-ms-input-placeholder': { color: '#EFEFEF' },
+                  '::-ms-input-placeholder': { color: '#EFEFEF' },
+                },
+              },
+              [`@media (max-width: ${theme.breakpoints.mobile})`]: {
+                label: { display: 'none' },
+                textArea: {
+                  '::placeholder': { color: theme.colors.primary[0], fontSize: '16px', fontWeight: 400 },
+                  ':-ms-input-placeholder': { color: theme.colors.primary[0], fontSize: '16px', fontWeight: 400 },
+                  '::-ms-input-placeholder': { color: theme.colors.primary[0], fontSize: '16px', fontWeight: 400 },
+                },
+              },
+            })}
           />
 
           <Button
-            variant="subtle"
-            color="black"
+            variant="outline"
+            color="primary.0"
+            radius={20}
+            p="13px 32px"
             fullWidth={false}
             maw="50%"
             size="s"
+            sx={(theme) => ({
+              [`@media (max-width: ${theme.breakpoints.mobile})`]: {
+                maxWidth: 'none',
+                backgroundColor: '#EFEFEF;',
+              },
+            })}
           >
             POŠALJITE NAM UPIT
           </Button>
@@ -95,6 +235,12 @@ export default function Contact() {
             fw={700}
             color="primary.0"
             mb={50}
+            sx={(theme) => ({
+              [`@media (max-width: ${theme.breakpoints.mobile})`]: {
+                fontSize: '36px',
+                textAlign: 'center',
+              },
+            })}
           >
             JAVITE SE
           </Text>
@@ -106,6 +252,12 @@ export default function Contact() {
             fw={500}
             color="primary.0"
             mb={50}
+            sx={(theme) => ({
+              [`@media (max-width: ${theme.breakpoints.mobile})`]: {
+                fontSize: '14px',
+                textAlign: 'center',
+              },
+            })}
           >
             Gundulićeva 32, <br /> 31000 Osijek <br /> 099 8802 436
           </Text>
@@ -117,6 +269,12 @@ export default function Contact() {
             fw={700}
             color="primary.0"
             mb={50}
+            sx={(theme) => ({
+              [`@media (max-width: ${theme.breakpoints.mobile})`]: {
+                fontSize: '14px',
+                textAlign: 'center',
+              },
+            })}
           >
             HELLO@GALERIAARTA.COM
           </Text>

@@ -1,4 +1,4 @@
-import { Anchor, Flex, Image, Modal, Text } from '@mantine/core';
+import { Anchor, Flex, Image, Modal } from '@mantine/core';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -26,7 +26,7 @@ export default function Menu({ opened, close }: any) {
       <Modal.Overlay />
       <Modal.Content
         bg="#084453"
-        h="100%"
+        h="25%"
       >
         <Modal.Header bg="#084453">
           <Image
@@ -44,13 +44,6 @@ export default function Menu({ opened, close }: any) {
             direction="column"
             gap={20}
           >
-            <Text
-              color="white"
-              size="s"
-              fw={700}
-            >
-              LINKOVI
-            </Text>
             <Flex gap={20}>
               <Flex
                 direction="column"
@@ -70,17 +63,15 @@ export default function Menu({ opened, close }: any) {
                   fw={500}
                   onClick={() => handleClick('reservation')}
                 >
-                  {' '}
                   REZERVIRAJ
                 </Anchor>
                 <Anchor
                   color="white"
                   size={20}
                   fw={500}
-                  onClick={() => handleClick('gift')}
+                  onClick={() => handleClick('workshops')}
                 >
-                  {' '}
-                  POKLON BON
+                  RADIONICE
                 </Anchor>
               </Flex>
               <Flex
@@ -94,14 +85,6 @@ export default function Menu({ opened, close }: any) {
                   onClick={() => handleClick('gallery')}
                 >
                   GALERIJA
-                </Anchor>
-                <Anchor
-                  color="white"
-                  size={20}
-                  fw={500}
-                  onClick={() => handleClick('service')}
-                >
-                  USLUGE
                 </Anchor>
                 <Anchor
                   color="white"
