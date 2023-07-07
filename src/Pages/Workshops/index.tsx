@@ -1,9 +1,13 @@
 import { Badge, Box, Group, SimpleGrid, Text } from '@mantine/core';
 import React from 'react';
+import { GetEvents } from '../../Service/Queries';
 import EventCard from '../../components/Card/Event';
 
 export default function Workshops() {
-  const [activeFilter, setFilter] = React.useState('vine_art');
+  const [activeFilter, setFilter] = React.useState('workshopsEventsCollection');
+
+  const data = GetEvents({ filter: activeFilter }) as any;
+
   return (
     <Box>
       <Box ta="center">
@@ -23,8 +27,8 @@ export default function Workshops() {
           <Badge
             color="primary.0"
             size="xl"
-            variant={activeFilter === 'vine_art' ? 'filled' : 'outline'}
-            onClick={() => setFilter('vine_art')}
+            variant={activeFilter === 'workshopsEventsCollection' ? 'filled' : 'outline'}
+            onClick={() => setFilter('workshopsEventsCollection')}
             style={{ cursor: 'pointer' }}
           >
             Vine & Art
@@ -32,8 +36,8 @@ export default function Workshops() {
           <Badge
             color="primary.0"
             size="xl"
-            variant={activeFilter === 'keramika' ? 'filled' : 'outline'}
-            onClick={() => setFilter('keramika')}
+            variant={activeFilter === 'ceramicsCollection' ? 'filled' : 'outline'}
+            onClick={() => setFilter('ceramicsCollection')}
             style={{ cursor: 'pointer' }}
           >
             Keramika
@@ -52,19 +56,9 @@ export default function Workshops() {
         ]}
         style={{ justifyItems: 'center' }}
       >
-        <EventCard />
-        <EventCard />
-        <EventCard />
-        <EventCard />
-        <EventCard />
-        <EventCard />
-        <EventCard />
-        <EventCard />
-        <EventCard />
-        <EventCard />
-        <EventCard />
-        <EventCard />
-        <EventCard />
+        {data?.data?.[activeFilter]?.items?.map((event: any) => {
+          return <EventCard {...event} />;
+        })}
       </SimpleGrid>
     </Box>
   );

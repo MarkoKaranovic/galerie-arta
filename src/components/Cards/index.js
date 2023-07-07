@@ -1,10 +1,9 @@
 import { useTheme } from '@emotion/react';
 import { Box, Image } from '@mantine/core';
-import React from 'react';
 
 import { useStyles } from './styles';
 
-function CarouselCard({ title, job, review, image }) {
+function CarouselCard({ image }) {
   const { classes } = useStyles();
 
   const theme = useTheme();

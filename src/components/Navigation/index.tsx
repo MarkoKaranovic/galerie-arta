@@ -2,6 +2,7 @@ import { Burger, Button, Flex, Image } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 
 import { useNavigate } from 'react-router-dom';
+import { Service } from '../../Service';
 import Menu from '../Menu';
 import { useStyles } from './styles';
 export default function Navigation() {
@@ -65,6 +66,26 @@ export default function Navigation() {
           p={5}
           bg={'#FFFBF5'}
           onClick={() => navigate('/workshops')}
+          onMouseEnter={() => {
+            const query = `{
+  workshopsEventsCollection {
+    items {
+      title
+      eventImage{
+        url
+      }
+      date
+      price
+      difficulty
+      location
+    }
+  }
+}`;
+            Service.Client.prefetchQuery({
+              queryKey: ['events'],
+              queryFn: async () => await Service.instance.post('5xvum32zltkp/', JSON.stringify({ query })),
+            });
+          }}
           className={classes.navigationItem}
         >
           RADIONICE

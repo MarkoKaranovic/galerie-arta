@@ -1,7 +1,10 @@
 import { Flex, Text } from '@mantine/core';
+import { GetGalleryImages } from '../../Service/Queries';
 import TestimonialSlider from '../../components/Slider';
 
 export default function Gallery() {
+  const data = GetGalleryImages();
+  console.log(data);
   return (
     <Flex
       direction="column"
@@ -55,7 +58,7 @@ export default function Gallery() {
         i ne brinite ako vam umjetnost nije jača strana. Stvorit ćete pravo malo remek djelo na koje ćete biti ponosni.
         Neka zabava počne!
       </Text>
-      <TestimonialSlider />
+      <TestimonialSlider data={data?.data?.galleryImagesCollection?.items ?? []} />
     </Flex>
   );
 }
